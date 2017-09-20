@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-color: black; }
+  background-color: black;
+  color: white; }
 
 header#primary {
   width: 100%;
@@ -11,8 +12,7 @@ header#primary {
   background-image: url("../../assets/earth.png");
   background-size: 80%;
   background-repeat: no-repeat;
-  background-position: center 128px;
-  color: white; }
+  background-position: center 128px; }
   header#primary nav {
     padding-bottom: 16px;
     position: absolute;

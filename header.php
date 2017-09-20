@@ -5,7 +5,7 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <header>
+    <header id="primary">
       <nav>
         <h1>astrobotany</h1>
         <?php wp_nav_menu(array(

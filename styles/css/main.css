@@ -46,4 +46,9 @@ body.is-front-page header#primary {
   background-repeat: no-repeat;
   background-position: center 128px; }
 
+main {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto; }
+
 /*# sourceMappingURL=main.css.map */

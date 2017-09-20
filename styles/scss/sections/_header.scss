@@ -2,14 +2,11 @@ header#primary {
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
-  position: relative;
 
   nav {
-    padding-bottom: 16px;
-    position: absolute;
-    top: 32px;
-    right: 32px;
-    left: 32px;
+    height: 28px;
+    margin: 16px 32px;
+    padding: 16px 0;
     border-bottom: 2px solid white;
 
     h1 {

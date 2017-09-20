@@ -7,7 +7,7 @@
   <body>
     <header id="primary">
       <nav>
-        <h1>astrobotany</h1>
+        <h1><a href="<?php echo get_site_url(); ?>">astrobotany</a></h1>
         <?php wp_nav_menu(array(
           'theme_location' => 'primary',
           'menu_id'        => 'menu',

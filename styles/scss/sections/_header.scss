@@ -22,6 +22,12 @@ header#primary {
       margin: 0;
       padding: 0 32px;
       float: left;
+
+      a:link,
+      a:visited {
+        color: white;
+        text-decoration: none;
+      }
     }
 
     ul#menu {

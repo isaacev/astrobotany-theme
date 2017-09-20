@@ -25,6 +25,10 @@ header#primary {
       margin: 0;
       padding: 0 32px;
       float: left; }
+      header#primary nav h1 a:link,
+      header#primary nav h1 a:visited {
+        color: white;
+        text-decoration: none; }
     header#primary nav ul#menu {
       height: 28px;
       margin: 0;

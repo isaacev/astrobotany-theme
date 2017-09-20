@@ -1,0 +1,53 @@
+header {
+  width: 100%;
+  height: 800px;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url('../../assets/earth.png');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center 128px;
+  color: white;
+
+  nav {
+    padding-bottom: 16px;
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    left: 32px;
+    border-bottom: 2px solid white;
+
+    h1 {
+      height: 28px;
+      margin: 0;
+      padding: 0 32px;
+      float: left;
+    }
+
+    ul#menu {
+      height: 28px;
+      margin: 0;
+      padding: 0;
+      float: right;
+      list-style: none;
+
+      li {
+        margin-right: 32px;
+        display: inline-block;
+        line-height: 28px;
+        font-size: 1.2rem;
+
+        a:link,
+        a:visited {
+          color: white;
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

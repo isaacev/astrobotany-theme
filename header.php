@@ -8,11 +8,11 @@
     <header>
       <nav>
         <h1>astrobotany</h1>
-        <ul id="menu">
-          <li><a href="#">blog</a>
-          <li><a href="#">research</a>
-          <li><a href="#">shop</a>
-        </ul>
+        <?php wp_nav_menu(array(
+          'theme_location' => 'primary',
+          'menu_id'        => 'menu',
+          'item_spacing'   => 'discard',
+        )); ?>
       </nav>
     </header>
     <main>

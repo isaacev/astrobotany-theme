@@ -51,5 +51,8 @@ main {
   margin: 0 auto; }
   main article {
     padding: 16px 32px; }
+    main article header h1 {
+      margin: 0;
+      font-size: 2rem; }
 
 /*# sourceMappingURL=main.css.map */

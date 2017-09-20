@@ -4,7 +4,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <?php wp_head(); ?>
   </head>
-  <body>
+  <body <?php body_class(is_front_page() ? 'is-front-page' : false); ?>>
     <header id="primary">
       <nav>
         <h1><a href="<?php echo get_site_url(); ?>">astrobotany</a></h1>

@@ -5,14 +5,9 @@ body {
 
 header#primary {
   width: 100%;
-  height: 800px;
   max-width: 1080px;
   margin: 0 auto;
-  position: relative;
-  background-image: url("../../assets/earth.png");
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: center 128px; }
+  position: relative; }
   header#primary nav {
     padding-bottom: 16px;
     position: absolute;
@@ -46,5 +41,12 @@ header#primary {
           text-decoration: none; }
         header#primary nav ul#menu li a:hover {
           text-decoration: underline; }
+
+body.is-front-page header#primary {
+  height: 800px;
+  background-image: url("../../assets/earth.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center 128px; }
 
 /*# sourceMappingURL=main.css.map */

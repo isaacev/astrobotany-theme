@@ -12,6 +12,7 @@
           'theme_location' => 'primary',
           'menu_id'        => 'menu',
           'item_spacing'   => 'discard',
+          'depth'          => 1,
         )); ?>
       </nav>
     </header>

@@ -9,9 +9,15 @@ function astrobotany_setup () {
 add_action('after_setup_theme', 'astrobotany_setup');
 
 function enqueue_styles () {
+  $handle = 'font-open-sans';
+  $src    = 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
+  $deps   = array();
+  $ver    = false;
+  wp_enqueue_style($handle, $src, $deps, $ver);
+
   $handle = 'main';
   $src    = get_template_directory_uri() . '/styles/css/main.css';
-  $deps   = array();
+  $deps   = array('font-open-sans');
   $ver    = false;
   wp_enqueue_style($handle, $src, $deps, $ver);
 }

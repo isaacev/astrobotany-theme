@@ -34,14 +34,19 @@ header#primary {
         line-height: 32px;
         font-size: 1rem;
 
+        &.current-menu-item a:link,
+        &.current-menu-item a:visited {
+          color: white;
+        }
+
         a:link,
         a:visited {
-          color: white;
+          color: darken(white, 20%);
           text-decoration: none;
         }
 
         a:hover {
-          text-decoration: underline;
+          color: white;
         }
       }
     }

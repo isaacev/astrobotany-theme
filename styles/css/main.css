@@ -32,12 +32,14 @@ header#primary {
         display: inline-block;
         line-height: 32px;
         font-size: 1rem; }
+        header#primary nav ul#menu li.current-menu-item a:link, header#primary nav ul#menu li.current-menu-item a:visited {
+          color: white; }
         header#primary nav ul#menu li a:link,
         header#primary nav ul#menu li a:visited {
-          color: white;
+          color: #cccccc;
           text-decoration: none; }
         header#primary nav ul#menu li a:hover {
-          text-decoration: underline; }
+          color: white; }
 
 body.is-front-page header#primary {
   height: 800px;

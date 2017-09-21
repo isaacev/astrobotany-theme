@@ -4,13 +4,13 @@ header#primary {
   margin: 0 auto;
 
   nav {
-    height: 28px;
+    height: 32px;
     margin: 16px 0;
     padding: 16px 32px;
     border-bottom: 2px solid white;
 
     h1 {
-      height: 28px;
+      height: 32px;
       margin: 0;
       float: left;
 
@@ -22,7 +22,7 @@ header#primary {
     }
 
     ul#menu {
-      height: 28px;
+      height: 32px;
       margin: 0;
       padding: 0;
       float: right;
@@ -31,8 +31,8 @@ header#primary {
       li {
         margin-left: 32px;
         display: inline-block;
-        line-height: 28px;
-        font-size: 1.2rem;
+        line-height: 32px;
+        font-size: 1rem;
 
         a:link,
         a:visited {

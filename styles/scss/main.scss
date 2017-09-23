@@ -1,9 +1,7 @@
 body {
   margin: 0;
-  background-color: black;
-  font-family: 'Open Sans', sans-serif;
-  color: white;
 }
 
 @import 'sections/header';
 @import 'sections/main';
+@import 'templates/content';

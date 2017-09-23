@@ -1,8 +1,5 @@
 body {
-  margin: 0;
-  background-color: black;
-  font-family: 'Open Sans', sans-serif;
-  color: white; }
+  margin: 0; }
 
 header#primary {
   width: 100%;
@@ -19,7 +16,7 @@ header#primary {
       float: left; }
       header#primary nav h1 a:link,
       header#primary nav h1 a:visited {
-        color: white;
+        color: black;
         text-decoration: none; }
     header#primary nav ul#menu {
       height: 32px;
@@ -33,13 +30,13 @@ header#primary {
         line-height: 32px;
         font-size: 1rem; }
         header#primary nav ul#menu li.current-menu-item a:link, header#primary nav ul#menu li.current-menu-item a:visited {
-          color: white; }
+          color: black; }
         header#primary nav ul#menu li a:link,
         header#primary nav ul#menu li a:visited {
           color: #cccccc;
           text-decoration: none; }
         header#primary nav ul#menu li a:hover {
-          color: white; }
+          color: black; }
 
 body.is-front-page header#primary {
   height: 800px;
@@ -57,5 +54,38 @@ main {
     main article header h1 {
       margin: 0;
       font-size: 2rem; }
+
+article.post {
+  display: flex;
+  flex-direction: row-reverse; }
+  article.post article {
+    margin-left: 32px;
+    padding: 16px 0 16px 32px;
+    border-left: 2px solid #efefef;
+    flex-grow: 1; }
+    article.post article h1 {
+      font-size: 2rem;
+      margin: 0; }
+    article.post article figure {
+      margin: 0;
+      text-align: center; }
+      article.post article figure img {
+        max-width: 100%; }
+    article.post article blockquote {
+      margin: 32px 0;
+      padding: 0 40px; }
+      article.post article blockquote p {
+        margin: 0;
+        font-size: 1.2rem;
+        line-height: 1.8rem; }
+  article.post aside {
+    min-width: 128px;
+    margin-top: 16px;
+    text-align: right;
+    flex-grow: 0; }
+    article.post aside img {
+      border-radius: 2px; }
+    article.post aside p.author {
+      font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */

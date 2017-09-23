@@ -1,0 +1,51 @@
+article.post {
+  display: flex;
+  flex-direction: row-reverse;
+
+  article {
+    margin-left: 32px;
+    padding: 16px 0 16px 32px;
+    border-left: 2px solid #efefef;
+    flex-grow: 1;
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    blockquote {
+      margin: 32px 0;
+      padding: 0 40px;
+
+      p {
+        margin: 0;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+
+  aside {
+    min-width: 128px;
+    margin-top: 16px;
+    text-align: right;
+    flex-grow: 0;
+
+    img {
+      border-radius: 2px;
+    }
+
+    p.author {
+      font-weight: bold;
+    }
+  }
+}

@@ -18,7 +18,7 @@ header#primary {
 
       a:link,
       a:visited {
-        color: white;
+        color: black;
         text-decoration: none;
       }
     }
@@ -38,7 +38,7 @@ header#primary {
 
         &.current-menu-item a:link,
         &.current-menu-item a:visited {
-          color: white;
+          color: black;
         }
 
         a:link,
@@ -48,7 +48,7 @@ header#primary {
         }
 
         a:hover {
-          color: white;
+          color: black;
         }
       }
     }

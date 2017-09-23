@@ -1,8 +1,12 @@
-<article>
-  <header>
-    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <p><?php echo get_the_date(); ?></p>
-    <p><?php the_author(); ?></p>
-  </header>
-  <?php the_excerpt(); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <article>
+    <h1><?php the_title(); ?></h1>
+    <?php if (is_single()): ?>
+      <?php the_content(); ?>
+    <?php else: ?>
+      <?php the_excerpt(); ?>
+      <p><a href="<?php the_permalink(); ?>">Read more</a></p>
+    <?php endif; ?>
+  </article>
+  <?php get_template_part('template-parts/util-post-aside'); ?>
 </article>

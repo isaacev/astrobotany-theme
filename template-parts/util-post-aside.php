@@ -1,5 +1,12 @@
 <?php
 
+if (function_exists('print_author_url') === false):
+function print_author_url () {
+  $author_id = get_the_author_meta('ID');
+  echo get_author_posts_url($author_id);
+}
+endif;
+
 if (function_exists('print_avatar_url') === false):
 function print_avatar_url () {
   $author_id = get_the_author_meta('ID');
@@ -27,7 +34,9 @@ endif;
 ?>
 
 <aside>
-  <img class="avatar" src="<?php print_avatar_url(); ?>">
+  <a href="<?php print_author_url(); ?>">
+    <img class="avatar" src="<?php print_avatar_url(); ?>">
+  </a>
   <p class="author"><?php echo get_the_author(); ?></p>
   <p class="date"><?php print_formatted_post_date(); ?></p>
   <?php if (is_single()): ?>

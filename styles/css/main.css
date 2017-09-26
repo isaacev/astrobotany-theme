@@ -84,7 +84,11 @@ article.post {
     text-align: right;
     flex-grow: 0; }
     article.post aside img {
+      width: 48px;
+      height: 48px;
       border-radius: 2px; }
+    article.post aside p {
+      margin: 8px 0 0 0; }
     article.post aside p.author {
       font-weight: bold; }
 

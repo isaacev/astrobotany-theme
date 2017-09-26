@@ -88,4 +88,25 @@ article.post {
     article.post aside p.author {
       font-weight: bold; }
 
+@media screen and (max-width: 736px) {
+  article.post {
+    flex-direction: column; }
+    article.post + article.post {
+      margin-top: 16px;
+      padding-top: 32px;
+      border-top: 2px solid #efefef; }
+    article.post article {
+      margin-left: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      border-style: none; }
+    article.post aside {
+      text-align: left;
+      flex-grow: 1; }
+      article.post aside img {
+        float: left; }
+      article.post aside p {
+        margin-left: 64px;
+        margin-top: 0; } }
+
 /*# sourceMappingURL=main.css.map */

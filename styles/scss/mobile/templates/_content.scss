@@ -1,0 +1,30 @@
+article.post {
+  flex-direction: column;
+
+  & + article.post {
+    margin-top: 16px;
+    padding-top: 32px;
+    border-top: 2px solid #efefef;
+  }
+
+  article {
+    margin-left: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-style: none;
+  }
+
+  aside {
+    text-align: left;
+    flex-grow: 1;
+
+    img {
+      float: left;
+    }
+
+    p {
+      margin-left: 48px + 16px;
+      margin-top: 0;
+    }
+  }
+}

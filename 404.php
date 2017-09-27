@@ -1,8 +1,7 @@
-<?php get_header(); ?>
+<?php
 
-<article>
-  <h1>404</h1>
-  <p>It seems that this page does not exist. It could be the result of a broken link or a mistyped URL.</p>
-</article>
+get_header();
 
-<?php get_footer(); ?>
+get_page_header('Page not found', 'Error 404');
+
+get_footer();

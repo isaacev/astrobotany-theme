@@ -1,5 +1,17 @@
+@import '../vars/fonts';
+
 main {
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
+
+  & > article {
+    padding: 0 32px;
+  }
+
+  article {
+    h1 {
+      font-size: $font-size-header;
+    }
+  }
 }

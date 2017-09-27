@@ -34,3 +34,20 @@ function get_page_header ($header, $subheader = null) {
   echo   '</h1>';
   echo '</header>';
 }
+
+function page_header ($args) {
+  echo '<header class="page-header">';
+  echo '<h1>';
+
+  if (array_key_exists('subheader', $args)) {
+    echo '<span class="subheader">';
+    echo esc_html($args['subheader']);
+    echo '</span>';
+  }
+
+  echo '<span class="header">';
+  echo esc_html($args['header']);
+  echo '</span>';
+  echo '</h1>';
+  echo '</header>';
+}

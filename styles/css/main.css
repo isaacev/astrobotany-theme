@@ -102,7 +102,7 @@ section.author {
     padding: 0;
     font-size: 2rem; }
     section.author h1 span.all-posts-by {
-      font-size: 1rem;
+      font-size: 16px;
       color: gray;
       display: block; }
     section.author h1 a:link,

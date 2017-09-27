@@ -101,7 +101,7 @@ section.author {
     margin: 0;
     padding: 0;
     font-size: 2rem; }
-    section.author h1 span {
+    section.author h1 span.all-posts-by {
       font-size: 1rem;
       color: gray;
       display: block; }

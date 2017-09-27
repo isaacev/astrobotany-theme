@@ -74,7 +74,7 @@ endif;
 
 <section id="author-<?php print_author_id(); ?>" class="author">
   <h1>
-    <span>All posts by</span>
+    <span class="all-posts-by">All posts by</span>
     <?php print_author_name(); ?>
     <?php print_author_edit_link(); ?>
   </h1>

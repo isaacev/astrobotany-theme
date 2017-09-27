@@ -23,3 +23,14 @@ function enqueue_styles () {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_styles');
+
+function get_page_header ($header, $subheader) {
+  echo '<header class="page-header">';
+  echo   '<h1>';
+  if (isset($subheader)) {
+    echo   '<span class="subheader">' . $subheader . '</span>';
+  }
+  echo     '<span class="header">' . $header . '</span>';
+  echo   '</h1>';
+  echo '</header>';
+}

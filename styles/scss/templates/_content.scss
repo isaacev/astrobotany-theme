@@ -1,11 +1,5 @@
 @import '../vars/fonts';
 
-body.single-post {
-  article.post article h1 {
-    font-size: $font-size-header;
-  }
-}
-
 article.post {
   padding: 32px 32px 32px 0;
   display: flex;
@@ -18,6 +12,11 @@ article.post {
     flex-grow: 1;
 
     h1 {
+      font-size: $font-size-header;
+      margin: 0;
+    }
+
+    h2 {
       font-size: $font-size-subheader;
       margin: 0;
     }

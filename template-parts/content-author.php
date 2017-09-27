@@ -73,9 +73,9 @@ endif;
 ?>
 
 <section id="author-<?php print_author_id(); ?>" class="author">
-  <h1>Posts by <?php print_author_name(); ?></h1>
-
-  <?php if (can_edit_other_user_profiles() || can_edit_own_profile()): ?>
-    <p class="edit"><?php print_author_edit_link(); ?></p>
-  <?php endif; ?>
+  <h1>
+    <span>All posts by</span>
+    <?php print_author_name(); ?>
+    <?php print_author_edit_link(); ?>
+  </h1>
 </section>

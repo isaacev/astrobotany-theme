@@ -10,7 +10,7 @@ endif;
 if (function_exists('print_author_id') === false):
 function print_author_id () {
   $author_id = get_author_data()->ID;
-  return $author_id;
+  echo $author_id;
 }
 endif;
 

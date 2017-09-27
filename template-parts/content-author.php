@@ -47,10 +47,12 @@ endif;
 
 if (function_exists('print_author_edit_link') === false):
 function print_author_edit_link () {
-  $author_id = get_author_data()->ID;
-  $link_url  = get_edit_user_link($author_id);
-  $link_text = 'Edit';
-  echo '<a href="' . $link_url . '">' . $link_text . '</a>';
+  if (can_edit_other_user_profiles() || can_edit_own_profile()) {
+    $author_id = get_author_data()->ID;
+    $link_url  = get_edit_user_link($author_id);
+    $link_text = 'Edit';
+    echo '<a href="' . $link_url . '">' . $link_text . '</a>';
+  }
 }
 endif;
 

@@ -45,6 +45,29 @@ function print_author_bio () {
 }
 endif;
 
+if (function_exists('print_author_edit_link') === false):
+function print_author_edit_link () {
+  $author_id = get_author_data()->ID;
+  $link_url  = get_edit_user_link($author_id);
+  $link_text = 'Edit';
+  echo '<a href="' . $link_url . '">' . $link_text . '</a>';
+}
+endif;
+
+if (function_exists('can_edit_other_user_profiles') === false):
+function can_edit_other_user_profiles () {
+  return current_user_can('edit_users');
+}
+endif;
+
+if (function_exists('can_edit_own_profile') === false):
+function can_edit_own_profile () {
+  $current_id = get_current_user_id();
+  $author_id = get_author_data()->ID;
+  return $current_id === $author_id;
+}
+endif;
+
 ?>
 
 <section id="author-<?php print_author_id(); ?>" class="author">
@@ -52,5 +75,9 @@ endif;
   <img src="<?php print_author_avatar_url(); ?>">
   <?php if (author_has_bio()): ?>
     <p class="bio"><?php print_author_bio(); ?></p>
+  <?php endif; ?>
+
+  <?php if (can_edit_other_user_profiles() || can_edit_own_profile()): ?>
+    <p class="edit"><?php print_author_edit_link(); ?></p>
   <?php endif; ?>
 </section>

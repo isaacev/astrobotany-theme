@@ -74,10 +74,6 @@ endif;
 
 <section id="author-<?php print_author_id(); ?>" class="author">
   <h1>Posts by <?php print_author_name(); ?></h1>
-  <img src="<?php print_author_avatar_url(); ?>">
-  <?php if (author_has_bio()): ?>
-    <p class="bio"><?php print_author_bio(); ?></p>
-  <?php endif; ?>
 
   <?php if (can_edit_other_user_profiles() || can_edit_own_profile()): ?>
     <p class="edit"><?php print_author_edit_link(); ?></p>

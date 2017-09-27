@@ -13,7 +13,8 @@ header#primary {
     header#primary nav h1 {
       height: 32px;
       margin: 0;
-      float: left; }
+      float: left;
+      font-size: 1.5rem; }
       header#primary nav h1 a:link,
       header#primary nav h1 a:visited {
         color: black;
@@ -50,6 +51,9 @@ main {
   max-width: 1080px;
   margin: 0 auto; }
 
+body.single-post article.post article h1 {
+  font-size: 2rem; }
+
 article.post {
   padding: 32px 32px 32px 0;
   display: flex;
@@ -60,7 +64,7 @@ article.post {
     border-left: 2px solid #efefef;
     flex-grow: 1; }
     article.post article h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin: 0; }
     article.post article figure {
       margin: 0;

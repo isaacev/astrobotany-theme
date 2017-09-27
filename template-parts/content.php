@@ -1,7 +1,9 @@
+<?php if (is_single()): ?>
+  <?php get_page_header(get_the_title()); ?>
+<?php endif; ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <article>
     <?php if (is_single()): ?>
-      <h1><?php the_title(); ?></h1>
       <?php the_content(); ?>
     <?php else: ?>
       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

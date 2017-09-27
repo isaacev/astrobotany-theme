@@ -1,7 +1,11 @@
-<?php get_header(); ?>
+<?php
 
-<?php while (have_posts()): the_post();
-  get_template_part('template-parts/content', 'page');
-endwhile; ?>
+get_header();
 
-<?php get_footer(); ?>
+if (have_posts()) {
+  while (have_posts()) { the_post();
+    get_template_part('template-parts/content', get_post_format());
+  }
+}
+
+get_footer();

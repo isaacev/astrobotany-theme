@@ -24,7 +24,7 @@ function enqueue_styles () {
 
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 
-function get_page_header ($header, $subheader) {
+function get_page_header ($header, $subheader = null) {
   echo '<header class="page-header">';
   echo   '<h1>';
   if (isset($subheader)) {

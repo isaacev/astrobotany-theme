@@ -10,7 +10,7 @@ if (have_posts()) {
 
   get_template_part('template-parts/util-pager');
 } else {
-  echo '<em>Author has not posted yet</em>';
+  get_template_part('template-parts/util-author-no-posts');
 }
 
 get_footer();

@@ -1,5 +1,8 @@
+@import 'vars/fonts';
+
 body {
   margin: 0;
+  font-size: $font-size-default;
 }
 
 @import 'sections/header';

@@ -51,3 +51,31 @@ function page_header ($args) {
   echo '</h1>';
   echo '</header>';
 }
+
+function print_author_profile_url () {
+  $author_id = get_the_author_meta('ID');
+  echo get_author_posts_url($author_id);
+}
+
+function print_author_profile_picture_url () {
+  $author_id = get_the_author_meta('ID');
+  echo get_avatar_url($author_id, [
+    'size' => 64,
+  ]);
+}
+
+function print_author_name () {
+  $display_name = get_the_author_meta('display_name');
+  $nice_name = get_the_author_meta('nicename');
+
+  if ($display_name) {
+    echo $display_name;
+  } else {
+    echo $nice_name;
+  }
+}
+
+function print_post_date () {
+  $format = 'M j<\s\u\p>S</\s\u\p> Y';
+  echo get_the_date($format);
+}

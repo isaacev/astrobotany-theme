@@ -9,6 +9,7 @@
 <?php page_header([
   'header' => get_the_title(),
 ]); ?>
+
 <article id="page-<?php the_ID(); ?>">
   <?php the_content(); ?>
 </article>

@@ -1,7 +1,10 @@
 <?php
 
 get_header();
-get_page_header('&lsquo;' . get_search_query() . '&rsquo;', 'Search results for');
+page_header([
+  'subheader' => 'Search results for',
+  'header'    => '&lsquo;' . get_search_query() . '&rsquo;',
+]);
 
 if (have_posts()) {
   while (have_posts()) { the_post();

@@ -2,6 +2,9 @@
 
 get_header();
 
-get_page_header('Page not found', 'Error 404');
+page_header([
+  'subheader' => 'Error 404',
+  'header'    => 'Page not found',
+]);
 
 get_footer();

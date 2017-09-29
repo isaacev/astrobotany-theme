@@ -9,10 +9,12 @@
 ?>
 
 <article class="empty">
-  <?php if (is_page()): ?>
+  <?php if (get_post_type() === 'page'): ?>
     <p>This page hasn&rsquo;t been written yet.</p>
   <?php elseif (is_author()): ?>
     <p>The author hasn&rsquo;t written any posts yet.</p>
+  <?php elseif (get_post_type() === 'post'): ?>
+    <p>This post hasn&rsquo;t been written yet.</p>
   <?php elseif (is_search()): ?>
     <p>No results found.</p>
   <?php else: ?>

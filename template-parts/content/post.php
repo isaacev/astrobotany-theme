@@ -14,6 +14,12 @@
 
 ?>
 
+<?php if (is_single()): ?>
+  <?php page_header([
+    'header' => get_the_title(),
+  ]); ?>
+<?php endif; ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <article>
     <?php if (is_single()): ?>

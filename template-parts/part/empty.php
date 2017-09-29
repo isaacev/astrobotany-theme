@@ -13,6 +13,8 @@
     <p>This page hasn&rsquo;t been written yet.</p>
   <?php elseif (is_author()): ?>
     <p>The author hasn&rsquo;t written any posts yet.</p>
+  <?php elseif (is_search()): ?>
+    <p>No results found.</p>
   <?php else: ?>
     <p>Sorry! Nothing could be found.</p>
   <?php endif; ?>

@@ -64,6 +64,17 @@ function print_author_profile_picture_url () {
   ]);
 }
 
+function get_author_id_from_query () {
+  $author_data = get_user_by('slug', get_query_var('author_name'));
+  return $author_data->ID;
+}
+
+function get_author_name_from_id ($author_id) {
+  $display_name = get_the_author_meta('display_name', $author_id);
+  $nice_name = get_the_author_meta('user_nicename', $author_id);
+  return $display_name ? $display_name : $nice_name;
+}
+
 function print_author_name () {
   $display_name = get_the_author_meta('display_name');
   $nice_name = get_the_author_meta('nicename');

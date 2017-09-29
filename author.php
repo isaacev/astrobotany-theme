@@ -10,7 +10,7 @@ if (have_posts()) {
 
   get_template_part('template-parts/part/pagination');
 } else {
-  get_template_part('template-parts/util-author-no-posts');
+  get_template_part('template-parts/part/empty');
 }
 
 get_footer();

@@ -31,7 +31,7 @@ The contents of the menu can be changed at any time by navigating back to the me
 
 ### Blog Page
 
-Create a page titled "Blog" with no contents. Navigate to the Settings&rarr;Reading page. Under the section labled `Front page displays` from the dropdown labled `Posts page` select the "Blog" page. Click `Save Changes`. Now the page at `astrobotany.com/blog` will automatically be populated with the latest blog posts.
+[Create a page](https://codex.wordpress.org/Pages) titled "Blog" with no contents. Navigate to the Settings&rarr;Reading page. Under the section labled `Front page displays` from the dropdown labled `Posts page` select the "Blog" page. Click `Save Changes`. Now the page at `astrobotany.com/blog` will automatically be populated with the latest blog posts.
 
 
 ### Home Page

@@ -36,4 +36,4 @@ The contents of the menu can be changed at any time by navigating back to the me
 
 ### Home Page
 
-Create a page titled "Home" with contents for the front page of the site. Navigate to the Settings&rarr;Reading page. Under the section labled `Front page displays` from the dropdown labled `Front page` select the "Home" page. Click `Save Changes`. Now the page at `astrobotany.com/` will show any contents added to the "Home" page.
+[Create a page](https://codex.wordpress.org/Pages) titled "Home" with contents for the front page of the site. Navigate to the Settings&rarr;Reading page. Under the section labled `Front page displays` from the dropdown labled `Front page` select the "Home" page. Click `Save Changes`. Now the page at `astrobotany.com/` will show any contents added to the "Home" page.

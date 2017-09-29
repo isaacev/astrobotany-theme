@@ -60,7 +60,7 @@ article.post {
   display: flex; }
   article.post article {
     margin-left: 32px;
-    padding: 16px 0;
+    padding: 0;
     flex-grow: 1; }
     article.post article h1 {
       font-size: 2rem;

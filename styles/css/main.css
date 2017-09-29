@@ -132,6 +132,27 @@ header.page-header {
 article.author-no-posts p {
   margin: 0; }
 
+nav.pagination {
+  text-align: center; }
+  nav.pagination a:link,
+  nav.pagination a:hover,
+  nav.pagination a:visited {
+    text-decoration: none;
+    color: black; }
+  nav.pagination a:link:hover span.link {
+    background-color: #efefef; }
+  nav.pagination a.disabled span.link {
+    background: none;
+    color: silver; }
+  nav.pagination span.link {
+    min-width: 24px;
+    padding: 4px 8px;
+    display: inline-block;
+    line-height: 24px; }
+  nav.pagination span.active {
+    background-color: black;
+    color: white; }
+
 @media screen and (max-width: 736px) {
   article.post {
     flex-direction: column; }

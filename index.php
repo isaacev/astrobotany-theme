@@ -7,7 +7,7 @@ if (have_posts()) {
     get_template_part('template-parts/content', get_post_format());
   }
 
-  get_template_part('template-parts/util-pager');
+  get_template_part('template-parts/part/pagination');
 }
 
 get_footer();

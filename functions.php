@@ -79,3 +79,84 @@ function print_post_date () {
   $format = 'M j<\s\u\p>S</\s\u\p> Y';
   echo get_the_date($format);
 }
+
+function print_pagination_links ($args) {
+  $wrapper_default  = $args['default']  ? $args['default']  : '%s';
+  $wrapper_active   = $args['active']   ? $args['active']   : '%s';
+  $wrapper_prev     = $args['prev']     ? $args['prev']     : '%s';
+  $wrapper_next     = $args['next']     ? $args['next']     : '%s';
+  $wrapper_ellipsis = $args['ellipsis'] ? $args['ellipsis'] : '%s';
+  $link_working     = '<a href="%s">%s</a>';
+  $link_disabled    = '<a class="disabled">%s</a>';
+
+  global $wp_query;
+  $paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
+  $max = intval($wp_query->max_num_pages);
+
+  // Add current page to list of linked pages.
+  if ($paged >= 1) {
+    $links[] = $paged;
+  }
+
+  // Add pages before current page to list of linked pages.
+  if ($paged >= 3) {
+    $links[] = $paged - 1;
+  }
+
+  // Add pages after current page to list of linked pages.
+  if (($paged + 2) <= $max) {
+    $links[] = $paged + 1;
+  }
+
+  // Previous post link.
+  if (get_previous_posts_link()) {
+    $url = previous_posts(0, false);
+    printf($link_working, $url, $wrapper_prev);
+  } else {
+    printf($link_disabled, $wrapper_prev);
+  }
+
+  // Render link to first page and render ellipses if necessary.
+  if (!in_array(1, $links)) {
+    $url     = esc_url(get_pagenum_link(1));
+    $text    = '1';
+    $format  = (1 == $paged) ? $wrapper_active : $wrapper_default;
+    $content = sprintf($format, $text);
+    printf($link_working, $url, $content);
+
+    if (!in_array(2, $links)) {
+      printf($wrapper_ellipsis);
+    }
+  }
+
+  // Link to current page and 2 pages in either direction if necessary.
+  sort($links);
+  foreach ((array) $links as $link) {
+    $url     = esc_url(get_pagenum_link($link));
+    $text    = $link;
+    $format  = ($paged == $link) ? $wrapper_active : $wrapper_default;
+    $content = sprintf($format, $text);
+    printf($link_working, $url, $content);
+  }
+
+  // Render link to last page and render ellipses if necessary.
+  if (!in_array($max, $links)) {
+    if (!in_array($max - 1, $links)) {
+      printf($wrapper_ellipsis);
+    }
+
+    $url     = esc_url(get_pagenum_link($max));
+    $text    = $max;
+    $format  = ($paged == $max) ? $wrapper_active : $wrapper_default;
+    $content = sprintf($format, $text);
+    printf($link_working, $url, $content);
+  }
+
+  // Next post link.
+  if (get_next_posts_link()) {
+    $url = next_posts(0, false);
+    printf($link_working, $url, $wrapper_next);
+  } else {
+    printf($link_disabled, $wrapper_next);
+  }
+}

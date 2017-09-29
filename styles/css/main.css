@@ -70,6 +70,8 @@ article.post {
       margin: 0 0 16px; }
     article.post article p {
       margin: 0 0 16px; }
+      article.post article p:last-child {
+        margin-bottom: 0; }
     article.post article figure {
       margin: 0;
       text-align: center; }
@@ -82,19 +84,14 @@ article.post {
         margin: 0;
         font-size: 1.2rem;
         line-height: 1.8rem; }
-  article.post aside {
-    min-width: 128px;
-    margin-top: 16px;
-    text-align: right;
-    flex-grow: 0; }
-    article.post aside img {
-      width: 48px;
-      height: 48px;
-      border-radius: 2px; }
-    article.post aside p {
-      margin: 8px 0 0 0; }
-    article.post aside p.author {
-      font-weight: bold; }
+  article.post aside img {
+    width: 48px;
+    height: 48px;
+    border-radius: 2px; }
+  article.post aside p {
+    margin: 8px 0 0 0; }
+  article.post aside p.author {
+    font-weight: bold; }
 
 section.author {
   margin: 0;
@@ -173,12 +170,16 @@ p.tags .tag {
   article.post {
     padding: 32px 32px 32px 0;
     flex-direction: row-reverse; }
-    article.post aside p.tags {
+    article.post aside {
+      min-width: 128px;
       text-align: right;
-      word-wrap: break-word; }
-      article.post aside p.tags a.tag {
-        margin: 2px 0;
-        display: inline-block; } }
+      flex-grow: 0; }
+      article.post aside p.tags {
+        text-align: right;
+        word-wrap: break-word; }
+        article.post aside p.tags a.tag {
+          margin: 2px 0;
+          display: inline-block; } }
 @media screen and (max-width: 736px) {
   article.post {
     flex-direction: column;
@@ -193,6 +194,7 @@ p.tags .tag {
       padding-left: 0;
       border-style: none; }
     article.post aside {
+      margin-top: 32px;
       text-align: left;
       flex-grow: 1; }
       article.post aside img {

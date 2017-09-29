@@ -20,6 +20,10 @@ article.post {
 
     p {
       margin: 0 0 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     figure {
@@ -44,11 +48,6 @@ article.post {
   }
 
   aside {
-    min-width: 128px;
-    margin-top: 16px;
-    text-align: right;
-    flex-grow: 0;
-
     img {
       width: 48px;
       height: 48px;

@@ -3,6 +3,10 @@ article.post {
   flex-direction: row-reverse;
 
   aside {
+    min-width: 128px;
+    text-align: right;
+    flex-grow: 0;
+
     p.tags {
       text-align: right;
       word-wrap: break-word;

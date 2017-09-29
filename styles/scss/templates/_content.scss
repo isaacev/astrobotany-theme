@@ -7,18 +7,22 @@ article.post {
 
   article {
     margin-left: 32px;
-    padding: 16px 0 16px 32px;
-    border-left: 2px solid #efefef;
+    padding: 16px 0;
+    // border-left: 2px solid #efefef;
     flex-grow: 1;
 
     h1 {
       font-size: $font-size-header;
-      margin: 0;
+      margin: 0 0 16px;
     }
 
     h2 {
       font-size: $font-size-subheader;
-      margin: 0;
+      margin: 0 0 16px;
+    }
+
+    p {
+      margin: 0 0 16px;
     }
 
     figure {

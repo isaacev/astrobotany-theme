@@ -56,6 +56,9 @@ main {
   main article h1 {
     font-size: 2rem; }
 
+footer#primary {
+  text-align: center; }
+
 article.post {
   display: flex; }
   article.post article {

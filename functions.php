@@ -4,6 +4,7 @@ function astrobotany_setup () {
   $loc  = 'primary';
   $desc = 'Navigation menu in header of each page';
   register_nav_menu($loc, $desc);
+  add_theme_support('html5');
 }
 
 add_action('after_setup_theme', 'astrobotany_setup');

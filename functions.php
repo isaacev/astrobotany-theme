@@ -161,3 +161,17 @@ function print_pagination_links ($args) {
     printf($link_disabled, $wrapper_next);
   }
 }
+
+function print_tags () {
+  $tags = get_the_tags();
+  echo '<p class="tags">';
+
+  foreach ($tags as $tag) {
+    $id   = $tag->term_id;
+    $url  = get_tag_link($id);
+    $name = $tag->name;
+    printf('<a id="tag-%s" class="tag" href="%s">%s</a> ', $id, $url, $name);
+  }
+
+  echo '</p>';
+}

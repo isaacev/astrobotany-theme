@@ -97,6 +97,12 @@ article.post {
       margin: 8px 0 0 0; }
     article.post aside p.author {
       font-weight: bold; }
+    article.post aside p.tags {
+      text-align: right;
+      word-wrap: break-word; }
+      article.post aside p.tags a.tag {
+        margin: 2px 0;
+        display: inline-block; }
 
 section.author {
   margin: 0;
@@ -153,6 +159,22 @@ nav.pagination {
   nav.pagination span.active {
     background-color: black;
     color: white; }
+
+div.tags .tag,
+p.tags .tag {
+  padding: 3px 6px;
+  border: 1px solid silver;
+  border-radius: 3px; }
+  div.tags .tag:hover,
+  p.tags .tag:hover {
+    background-color: #f3f3f3; }
+  div.tags .tag:link, div.tags .tag:hover, div.tags .tag:active, div.tags .tag:visited,
+  p.tags .tag:link,
+  p.tags .tag:hover,
+  p.tags .tag:active,
+  p.tags .tag:visited {
+    color: black;
+    text-decoration: none; }
 
 @media screen and (max-width: 736px) {
   article.post {

@@ -140,7 +140,8 @@ article.author-no-posts p {
   margin: 0; }
 
 nav.pagination {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 32px; }
   nav.pagination a:link,
   nav.pagination a:hover,
   nav.pagination a:visited {

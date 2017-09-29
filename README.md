@@ -24,7 +24,7 @@ After installing and activating the Astrobotany theme there are still a few opti
 
 ### Navigation Menu
 
-Create a menu and populate it with links to prominent pages on the site. In order for this menu to appear at the top of every page, the checkbox labeled **Navigation menu in header of each page** at the bottom of the page must be selected. Be sure to click the button labled "Save Menu" to save this menu.
+[Create a menu](https://codex.wordpress.org/WordPress_Menu_User_Guide) and populate it with links to prominent pages on the site. In order for this menu to appear at the top of every page, the checkbox labeled **Navigation menu in header of each page** at the bottom of the page must be selected. Be sure to click the button labled "Save Menu" to save this menu.
 
 The contents of the menu can be changed at any time by navigating back to the menu editing page, selecting the menu to edit, making changes, and clicking "Save Menu".
 

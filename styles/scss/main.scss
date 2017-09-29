@@ -1,6 +1,9 @@
 @import 'vars/fonts';
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
   margin: 0;
   font-size: $font-size-default;
 }

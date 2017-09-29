@@ -11,5 +11,9 @@
 ]); ?>
 
 <article id="page-<?php the_ID(); ?>">
-  <?php the_content(); ?>
+  <?php if (get_the_content() === ''): ?>
+    <?php get_template_part('template-parts/part/empty'); ?>
+  <?php else: ?>
+    <?php the_content(); ?>
+  <?php endif; ?>
 </article>

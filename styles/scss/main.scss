@@ -13,4 +13,6 @@ body {
 @import 'templates/util';
 @import 'templates/parts/pagination';
 @import 'templates/parts/tags';
-@import 'mobile/mobile';
+
+@import 'breakpoints/min-737/breakpoint';
+@import 'breakpoints/max-736/breakpoint';

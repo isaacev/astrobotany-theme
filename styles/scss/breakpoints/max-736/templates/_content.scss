@@ -1,5 +1,6 @@
 article.post {
   flex-direction: column;
+  padding: 32px;
 
   & + article.post {
     margin-top: 16px;
@@ -25,6 +26,17 @@ article.post {
     p {
       margin-left: 48px + 16px;
       margin-top: 0;
+    }
+
+    p.tags {
+      clear: both;
+      margin: 16px 0 0;
+      word-wrap: break-word;
+
+      a.tag {
+        margin: 2px 0;
+        display: inline-block;
+      }
     }
   }
 }

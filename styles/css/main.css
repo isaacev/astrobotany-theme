@@ -13,7 +13,7 @@ header#primary {
     height: 32px;
     margin: 0;
     padding: 16px 32px;
-    border-bottom: 2px solid #cccccc; }
+    border-bottom: 2px solid #d9d9d9; }
     header#primary nav h1 {
       height: 32px;
       margin: 0;
@@ -38,7 +38,7 @@ header#primary {
           color: black; }
         header#primary nav ul#menu li a:link,
         header#primary nav ul#menu li a:visited {
-          color: #cccccc;
+          color: #d9d9d9;
           text-decoration: none; }
         header#primary nav ul#menu li a:hover {
           color: black; }
@@ -103,7 +103,7 @@ article.post {
 section.author {
   margin: 0;
   padding: 32px;
-  border-bottom: 2px solid #efefef; }
+  border-top: 2px solid #f2f2f2; }
   section.author h1 {
     margin: 0;
     padding: 0;
@@ -122,7 +122,7 @@ section.author {
 header.page-header {
   margin: 0;
   padding: 32px;
-  border-bottom: 2px solid #efefef; }
+  border-bottom: 2px solid #f2f2f2; }
   header.page-header h1 {
     margin: 0;
     padding: 0;
@@ -130,7 +130,7 @@ header.page-header {
     header.page-header h1 span.subheader {
       display: block;
       font-size: 16px;
-      color: gray; }
+      color: #bfbfbf; }
 
 article.author-no-posts p {
   margin: 0; }
@@ -160,11 +160,11 @@ nav.pagination {
 div.tags .tag,
 p.tags .tag {
   padding: 3px 6px;
-  border: 1px solid silver;
+  border: 1px solid #d9d9d9;
   border-radius: 3px; }
   div.tags .tag:hover,
   p.tags .tag:hover {
-    background-color: #f3f3f3; }
+    background-color: #f2f2f2; }
   div.tags .tag:link, div.tags .tag:hover, div.tags .tag:active, div.tags .tag:visited,
   p.tags .tag:link,
   p.tags .tag:hover,
@@ -194,7 +194,7 @@ p.tags .tag {
     article.post + article.post {
       margin-top: 16px;
       padding-top: 32px;
-      border-top: 2px solid #efefef; }
+      border-top: 2px solid #f2f2f2; }
     article.post article {
       margin-left: 0;
       padding-bottom: 0;

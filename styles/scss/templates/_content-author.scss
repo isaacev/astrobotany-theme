@@ -1,11 +1,10 @@
+@import '../vars/colors';
 @import '../vars/fonts';
 
 section.author {
-  $off-white: darken(white, 20%);
-
   margin: 0;
   padding: 32px;
-  border-bottom: 2px solid #efefef;
+  border-top: 2px solid $color-weak-line;
 
   h1 {
     margin: 0;

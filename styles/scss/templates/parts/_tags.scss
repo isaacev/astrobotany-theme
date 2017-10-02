@@ -1,12 +1,14 @@
+@import '../../vars/colors';
+
 div.tags,
 p.tags {
   .tag {
     padding: 3px 6px;
-    border: 1px solid silver;
+    border: 1px solid $color-strong-line;
     border-radius: 3px;
 
     &:hover {
-      background-color: lighten(silver, 20%);
+      background-color: $color-dim-white;
     }
 
     &:link,

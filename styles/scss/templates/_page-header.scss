@@ -1,9 +1,10 @@
+@import '../vars/colors';
 @import '../vars/fonts';
 
 header.page-header {
   margin: 0;
   padding: 32px;
-  border-bottom: 2px solid #efefef;
+  border-bottom: 2px solid $color-weak-line;
 
   h1 {
     margin: 0;
@@ -12,7 +13,7 @@ header.page-header {
     span.subheader {
       display: block;
       font-size: $font-size-default;
-      color: gray;
+      color: $color-gray;
     }
 
     font-size: $font-size-header;

@@ -118,7 +118,6 @@ section.author {
 
 header.page-header {
   margin: 0;
-  padding: 32px;
   border-bottom: 2px solid #f2f2f2; }
   header.page-header h1 {
     margin: 0;
@@ -187,7 +186,10 @@ p.tags .tag {
         word-wrap: break-word; }
         article.post aside p.tags a.tag {
           margin: 2px 0;
-          display: inline-block; } }
+          display: inline-block; }
+
+  header.page-header {
+    padding: 32px 32px; } }
 @media screen and (max-width: 736px) {
   header#primary nav {
     padding: 16px 16px; }
@@ -219,8 +221,7 @@ p.tags .tag {
           display: inline-block; }
 
   header.page-header {
-    padding-left: 16px;
-    padding-right: 16px; }
+    padding: 32px 16px; }
 
   nav.pagination {
     margin: 16px auto; } }

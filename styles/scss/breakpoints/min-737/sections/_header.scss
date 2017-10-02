@@ -1,0 +1,7 @@
+@import '../../../vars/layouts';
+
+header#primary {
+  nav {
+    padding: 16px $layout-page-margin-wide;
+  }
+}

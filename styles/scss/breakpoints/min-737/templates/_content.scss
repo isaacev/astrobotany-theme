@@ -1,5 +1,8 @@
+@import '../../../vars/layouts';
+
 article.post {
-  padding: 32px 32px 32px 0;
+  padding: $layout-page-margin-wide;
+  padding-left: 0;
   flex-direction: row-reverse;
 
   aside {

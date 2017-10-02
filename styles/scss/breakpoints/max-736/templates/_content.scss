@@ -1,14 +1,10 @@
 @import '../../../vars/colors';
+@import '../../../vars/layouts';
 
 article.post {
   flex-direction: column;
-  padding: 32px;
-
-  & + article.post {
-    margin-top: 16px;
-    padding-top: 32px;
-    border-top: 2px solid $color-weak-line;
-  }
+  padding: $layout-page-margin-narrow;
+  border-bottom: 2px solid $color-weak-line;
 
   article {
     margin-left: 0;
@@ -18,7 +14,7 @@ article.post {
   }
 
   aside {
-    margin-top: 32px;
+    margin-top: $layout-page-margin-narrow;
     text-align: left;
     flex-grow: 1;
 

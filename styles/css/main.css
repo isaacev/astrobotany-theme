@@ -12,7 +12,6 @@ header#primary {
   header#primary nav {
     height: 32px;
     margin: 0;
-    padding: 16px 32px;
     border-bottom: 2px solid #d9d9d9; }
     header#primary nav h1 {
       height: 32px;
@@ -55,8 +54,6 @@ main {
   flex: 1;
   max-width: 1080px;
   margin: 0 auto; }
-  main > article {
-    padding: 0 32px; }
   main article h1 {
     font-size: 2rem; }
 
@@ -174,8 +171,12 @@ p.tags .tag {
     text-decoration: none; }
 
 @media screen and (min-width: 737px) {
+  header#primary nav {
+    padding: 16px 32px; }
+
   article.post {
-    padding: 32px 32px 32px 0;
+    padding: 32px;
+    padding-left: 0;
     flex-direction: row-reverse; }
     article.post aside {
       min-width: 128px;
@@ -188,20 +189,20 @@ p.tags .tag {
           margin: 2px 0;
           display: inline-block; } }
 @media screen and (max-width: 736px) {
+  header#primary nav {
+    padding: 16px 16px; }
+
   article.post {
     flex-direction: column;
-    padding: 32px; }
-    article.post + article.post {
-      margin-top: 16px;
-      padding-top: 32px;
-      border-top: 2px solid #f2f2f2; }
+    padding: 16px;
+    border-bottom: 2px solid #f2f2f2; }
     article.post article {
       margin-left: 0;
       padding-bottom: 0;
       padding-left: 0;
       border-style: none; }
     article.post aside {
-      margin-top: 32px;
+      margin-top: 16px;
       text-align: left;
       flex-grow: 1; }
       article.post aside img {
@@ -215,6 +216,13 @@ p.tags .tag {
         word-wrap: break-word; }
         article.post aside p.tags a.tag {
           margin: 2px 0;
-          display: inline-block; } }
+          display: inline-block; }
+
+  header.page-header {
+    padding-left: 16px;
+    padding-right: 16px; }
+
+  nav.pagination {
+    margin: 16px auto; } }
 
 /*# sourceMappingURL=main.css.map */

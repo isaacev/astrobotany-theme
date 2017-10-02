@@ -1,14 +1,11 @@
 @import '../vars/fonts';
+@import '../vars/layouts';
 
 main {
   width: 100%;
   flex: 1;
-  max-width: 1080px;
+  max-width: $layout-page-max-width;
   margin: 0 auto;
-
-  & > article {
-    padding: 0 32px;
-  }
 
   article {
     h1 {

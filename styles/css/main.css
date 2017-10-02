@@ -42,13 +42,6 @@ header#primary {
         header#primary nav ul#menu li a:hover {
           color: black; }
 
-body.is-front-page header#primary {
-  height: 800px;
-  background-image: url("../../assets/earth.png");
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: center 128px; }
-
 main {
   width: 100%;
   flex: 1;

@@ -1,6 +1,5 @@
 @media screen and (max-width: 736px) {
-  @import 'sections/header';
-  @import 'templates/content';
-  @import 'templates/parts/page-header';
-  @import 'templates/parts/pagination';
+  @import 'sections/index';
+  @import 'templates/index';
+  @import 'templates/parts/index';
 }

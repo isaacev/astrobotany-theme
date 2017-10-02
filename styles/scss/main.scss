@@ -8,14 +8,9 @@ body {
   font-size: $font-size-default;
 }
 
-@import 'sections/header';
-@import 'sections/main';
-@import 'sections/footer';
-@import 'templates/content';
-@import 'templates/content-author';
-@import 'templates/parts/page-header';
-@import 'templates/parts/pagination';
-@import 'templates/parts/tags';
+@import 'sections/index';
+@import 'templates/index';
+@import 'templates/parts/index';
 
 @import 'breakpoints/min-737/breakpoint';
 @import 'breakpoints/max-736/breakpoint';

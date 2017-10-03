@@ -6,6 +6,7 @@ body {
   flex-flow: column;
   margin: 0;
   font-size: $font-size-default;
+  font-family: $font-face-body;
 }
 
 @import 'sections/index';

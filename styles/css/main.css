@@ -3,7 +3,8 @@ body {
   display: flex;
   flex-flow: column;
   margin: 0;
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: sans-serif; }
 
 header#primary {
   width: 100%;
@@ -17,7 +18,8 @@ header#primary {
       height: 32px;
       margin: 0;
       float: left;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      font-family: "Questrial", "Futura", sans-serif; }
       header#primary nav h1 a:link,
       header#primary nav h1 a:visited {
         color: black;
@@ -49,6 +51,8 @@ main {
   margin: 0 auto; }
   main > article > p:first-child {
     margin-top: 0; }
+  main h1, main h2, main h3, main h4, main h5, main h6 {
+    font-family: "Questrial", "Futura", sans-serif; }
 
 footer#primary {
   text-align: center; }

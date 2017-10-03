@@ -16,6 +16,12 @@ function enqueue_styles () {
   $ver    = false;
   wp_enqueue_style($handle, $src, $deps, $ver);
 
+  $handle = 'font-questrial';
+  $src    = 'https://fonts.googleapis.com/css?family=Questrial';
+  $deps   = array();
+  $ver    = false;
+  wp_enqueue_style($handle, $src, $deps, $ver);
+
   $handle = 'main';
   $src    = get_template_directory_uri() . '/styles/css/main.css';
   $deps   = array('font-open-sans');

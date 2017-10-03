@@ -1,0 +1,20 @@
+{
+  "name": "astrobotany-theme",
+  "version": "1.0.0",
+  "description": "a WordPress theme for astrobotany.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacev/astrobotany-theme.git"
+  },
+  "keywords": [
+    "WordPress",
+    "PHP",
+    "astrobotany"
+  ],
+  "author": "Isaac Evavold <isaacevavold@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/isaacev/astrobotany-theme/issues"
+  },
+  "homepage": "https://github.com/isaacev/astrobotany-theme"
+}

@@ -20,7 +20,7 @@ article.post {
 
     p {
       margin: 0 0 16px;
-      line-height: 1.6;
+      line-height: $line-height-default;
 
       &:last-child {
         margin-bottom: 0;

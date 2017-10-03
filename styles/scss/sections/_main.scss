@@ -10,4 +10,8 @@ main {
   & > article > p:first-child {
     margin-top: 0;
   }
+
+  & > article p {
+    line-height: $line-height-default;
+  }
 }

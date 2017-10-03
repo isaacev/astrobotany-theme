@@ -16,6 +16,12 @@ function enqueue_styles () {
   $ver    = false;
   wp_enqueue_style($handle, $src, $deps, $ver);
 
+  $handle = 'font-lato';
+  $src    = 'https://fonts.googleapis.com/css?family=Lato:400,400i,700';
+  $deps   = array();
+  $ver    = false;
+  wp_enqueue_style($handle, $src, $deps, $ver);
+
   $handle = 'font-questrial';
   $src    = 'https://fonts.googleapis.com/css?family=Questrial';
   $deps   = array();

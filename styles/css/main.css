@@ -85,6 +85,24 @@ article.post {
         margin: 0;
         font-size: 1.2rem;
         line-height: 1.8rem; }
+    article.post article div.wp-caption {
+      max-width: 100%;
+      margin: 32px 0; }
+      article.post article div.wp-caption img {
+        width: 100%;
+        height: auto;
+        display: block; }
+      article.post article div.wp-caption .wp-caption-text {
+        margin-top: 8px;
+        font-style: italic;
+        text-align: center; }
+      article.post article div.wp-caption.aligncenter {
+        margin-left: auto;
+        margin-right: auto; }
+      article.post article div.wp-caption.alignright {
+        margin-left: auto; }
+      article.post article div.wp-caption.alignleft {
+        margin-right: auto; }
   article.post aside img {
     width: 48px;
     height: 48px;

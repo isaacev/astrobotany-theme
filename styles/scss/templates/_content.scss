@@ -46,6 +46,36 @@ article.post {
         line-height: 1.8rem;
       }
     }
+
+    div.wp-caption {
+      max-width: 100%;
+      margin: 32px 0;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .wp-caption-text {
+        margin-top: 8px;
+        font-style: italic;
+        text-align: center;
+      }
+
+      &.aligncenter {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &.alignright {
+        margin-left: auto;
+      }
+
+      &.alignleft {
+        margin-right: auto;
+      }
+    }
   }
 
   aside {

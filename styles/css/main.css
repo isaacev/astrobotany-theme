@@ -75,11 +75,6 @@ article.post {
       line-height: 1.6; }
       article.post article p:last-child {
         margin-bottom: 0; }
-    article.post article figure {
-      margin: 0;
-      text-align: center; }
-      article.post article figure img {
-        max-width: 100%; }
     article.post article blockquote {
       margin: 32px 0;
       padding: 0 40px; }

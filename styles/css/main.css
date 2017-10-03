@@ -62,6 +62,49 @@ main {
   main > article p {
     line-height: 1.6; }
 
+article.copy h1 {
+  font-size: 2rem;
+  margin: 0 0 16px; }
+article.copy h2 {
+  font-size: 1.5rem;
+  margin: 0 0 16px; }
+article.copy p {
+  margin: 0 0 16px;
+  line-height: 1.6; }
+  article.copy p:last-child {
+    margin-bottom: 0; }
+article.copy img, article.copy > img,
+article.copy p img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 32px auto; }
+article.copy blockquote {
+  margin: 32px 0;
+  padding: 0 40px; }
+  article.copy blockquote p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.8rem; }
+article.copy div.wp-caption {
+  max-width: 100%;
+  margin: 32px 0; }
+  article.copy div.wp-caption img {
+    width: 100%;
+    height: auto;
+    display: block; }
+  article.copy div.wp-caption .wp-caption-text {
+    margin-top: 8px;
+    font-style: italic;
+    text-align: center; }
+  article.copy div.wp-caption.aligncenter {
+    margin-left: auto;
+    margin-right: auto; }
+  article.copy div.wp-caption.alignright {
+    margin-left: auto; }
+  article.copy div.wp-caption, article.copy div.wp-caption.alignleft {
+    margin-right: auto; }
+
 footer#primary {
   text-align: center; }
 
@@ -71,48 +114,6 @@ article.post {
     margin-left: 32px;
     padding: 0;
     flex-grow: 1; }
-    article.post article h1 {
-      font-size: 2rem;
-      margin: 0 0 16px; }
-    article.post article h2 {
-      font-size: 1.5rem;
-      margin: 0 0 16px; }
-    article.post article p {
-      margin: 0 0 16px;
-      line-height: 1.6; }
-      article.post article p:last-child {
-        margin-bottom: 0; }
-    article.post article > img,
-    article.post article p img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 32px auto; }
-    article.post article blockquote {
-      margin: 32px 0;
-      padding: 0 40px; }
-      article.post article blockquote p {
-        margin: 0;
-        font-size: 1.2rem;
-        line-height: 1.8rem; }
-    article.post article div.wp-caption {
-      max-width: 100%;
-      margin: 32px 0; }
-      article.post article div.wp-caption img {
-        width: 100%;
-        height: auto;
-        display: block; }
-      article.post article div.wp-caption .wp-caption-text {
-        margin-top: 8px;
-        font-style: italic;
-        text-align: center; }
-      article.post article div.wp-caption.aligncenter {
-        margin-left: auto;
-        margin-right: auto; }
-      article.post article div.wp-caption.alignright {
-        margin-left: auto; }
-      article.post article div.wp-caption.alignleft {
-        margin-right: auto; }
   article.post aside img {
     width: 48px;
     height: 48px;

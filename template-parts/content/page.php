@@ -11,7 +11,7 @@
     'header' => get_the_title(),
   ]); ?>
 
-  <article id="page-<?php the_ID(); ?>">
+  <article id="page-<?php the_ID(); ?>" class="copy">
     <?php if (get_the_content() === ''): ?>
       <?php get_template_part('template-parts/part/empty'); ?>
     <?php else: ?>
@@ -21,7 +21,7 @@
 <?php else: ?>
   <article id="page-<?php the_ID(); ?>">
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <article>
+    <article class="copy">
       <?php if (get_the_content() === ''): ?>
         <?php get_template_part('template-parts/part/empty'); ?>
       <?php else: ?>

@@ -21,7 +21,7 @@
 <?php endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <article>
+  <article class="copy">
     <?php if (is_single()): ?>
       <?php the_content(); ?>
     <?php else: ?>

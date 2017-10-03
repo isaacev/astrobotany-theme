@@ -15,5 +15,5 @@ gulp.task('bundle', () => {
 
   gulp.src(include.concat(exclude.map(p => '!' + p)))
       .pipe(zip('astrobotany-theme.zip'))
-      .pipe(gulp.dest('/Users/isaac/Desktop/workspace'))
+      .pipe(gulp.dest('.'))
 })

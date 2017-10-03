@@ -27,7 +27,8 @@ header#primary {
       }
     }
 
-    ul#menu {
+    ul#menu,
+    div#menu ul {
       height: 32px;
       margin: 0;
       padding: 0;

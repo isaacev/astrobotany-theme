@@ -25,24 +25,31 @@ header#primary {
       header#primary nav h1 a:visited {
         color: black;
         text-decoration: none; }
-    header#primary nav ul#menu {
+    header#primary nav ul#menu,
+    header#primary nav div#menu ul {
       height: 32px;
       margin: 0;
       padding: 0;
       float: right;
       list-style: none; }
-      header#primary nav ul#menu li {
+      header#primary nav ul#menu li,
+      header#primary nav div#menu ul li {
         margin-left: 32px;
         display: inline-block;
         line-height: 32px;
         font-size: 1rem; }
-        header#primary nav ul#menu li.current-menu-item a:link, header#primary nav ul#menu li.current-menu-item a:visited {
+        header#primary nav ul#menu li.current-menu-item a:link, header#primary nav ul#menu li.current-menu-item a:visited,
+        header#primary nav div#menu ul li.current-menu-item a:link,
+        header#primary nav div#menu ul li.current-menu-item a:visited {
           color: black; }
         header#primary nav ul#menu li a:link,
-        header#primary nav ul#menu li a:visited {
+        header#primary nav ul#menu li a:visited,
+        header#primary nav div#menu ul li a:link,
+        header#primary nav div#menu ul li a:visited {
           color: #d9d9d9;
           text-decoration: none; }
-        header#primary nav ul#menu li a:hover {
+        header#primary nav ul#menu li a:hover,
+        header#primary nav div#menu ul li a:hover {
           color: black; }
 
 main {

@@ -7,9 +7,7 @@ main {
   max-width: $layout-page-max-width;
   margin: 0 auto;
 
-  article {
-    h1 {
-      font-size: $font-size-header;
-    }
+  & > article > p:first-child {
+    margin-top: 0;
   }
 }

@@ -176,6 +176,11 @@ function print_pagination_links ($args) {
 
 function print_tags () {
   $tags = get_the_tags();
+
+  if (is_array($tags) === false) {
+    return;
+  }
+
   echo '<p class="tags">';
 
   foreach ($tags as $tag) {

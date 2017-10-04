@@ -80,6 +80,8 @@ header#primary {
       body.is-front-page header#primary nav ul#menu li a:hover,
       body.is-front-page header#primary nav div#menu ul li a:hover {
         color: white; }
+    body.is-front-page header#primary label[for="show-mobile-menu"]:hover:after {
+      color: white; }
     body.is-front-page header#primary .solar-system {
       margin: 32px auto; } }
   @media screen and (min-width: 300px) and (max-width: 600px) {

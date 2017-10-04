@@ -88,6 +88,10 @@ header#primary {
       }
     }
 
+    label[for="show-mobile-menu"]:hover:after {
+      color: white;
+    }
+
     .solar-system {
       margin: 32px auto;
     }

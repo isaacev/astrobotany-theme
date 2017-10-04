@@ -17,8 +17,8 @@
           'depth'          => 1,
         )); ?>
       </nav>
+      <?php if (is_front_page()): ?>
+        <?php get_template_part('template-parts/part/solar-system'); ?>
+      <?php endif; ?>
     </header>
-    <?php if (is_front_page()): ?>
-      <?php get_template_part('template-parts/part/solar-system'); ?>
-    <?php endif; ?>
     <main>

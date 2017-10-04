@@ -1,6 +1,7 @@
 @import '../vars/colors';
 @import '../vars/fonts';
 @import '../vars/layouts';
+@import '../templates/parts/solar-system';
 
 header#primary {
   width: 100%;
@@ -57,5 +58,63 @@ header#primary {
         }
       }
     }
+  }
+}
+
+body.is-front-page header#primary {
+  width: 100%;
+  max-width: 100%;
+  color: white;
+  background: black;
+
+  nav {
+    width: 100%;
+    max-width: $layout-page-max-width;
+    margin: 0 auto;
+    border-bottom-color: white;
+
+    h1 a:link,
+    h1 a:visited {
+      color: white;
+    }
+
+    ul#menu,
+    div#menu ul {
+      li a:hover {
+        color: white;
+      }
+    }
+  }
+
+  .solar-system {
+    margin: 32px auto;
+  }
+
+  $au : 300px;
+  $yr : 50s;
+  $dm : 10px;
+  $bg : (
+    'sun'     : bg(#FEC163, #DE4313),
+    'mercury' : bg(#ECF0F1, #95A5A6),
+    'venus'   : bg(#FAD7A1, #E96D71),
+    'earth'   : bg(#5EFCE8, #736EFE),
+    'moon'    : bg(#ECF0F1, #95A5A6),
+  );
+
+  @media screen and (max-width: 600px) {
+    $earth : 'earth', 0.0,       0.0,       4.0 * $dm, map-get($bg, 'earth');
+    $moon  : 'moon',  0.5 * $au, 0.3 * $yr, 1.5 * $dm, map-get($bg, 'moon');
+
+    @include solar-system('local', 200px, ($earth, $moon));
+  }
+
+  @media screen and (min-width: 601px) {
+    $sun     : 'sun',     0.0,       0.0,       4.0 * $dm, map-get($bg, 'sun');
+    $mercury : 'mercury', 0.4 * $au, 0.2 * $yr, 0.6 * $dm, map-get($bg, 'mercury');
+    $venus   : 'venus',   0.7 * $au, 0.6 * $yr, 0.9 * $dm, map-get($bg, 'venus');
+    $earth   : 'earth',   1.0 * $au, 1.0 * $yr, 1.0 * $dm, map-get($bg, 'earth');
+    $moon    : 'moon',    0.1 * $au, 0.1 * $yr, 0.3 * $dm, map-get($bg, 'moon');
+
+    @include solar-system('whole', 400px, ($sun, $mercury, $earth, $venus, $moon));
   }
 }

@@ -6,6 +6,16 @@ body {
   font-size: 16px;
   font-family: "Lato", sans-serif; }
 
+@keyframes clockwise {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes counter-clockwise {
+  0% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(0deg); } }
 header#primary {
   width: 100%;
   max-width: 1080px;
@@ -51,6 +61,178 @@ header#primary {
         header#primary nav ul#menu li a:hover,
         header#primary nav div#menu ul li a:hover {
           color: black; }
+
+body.is-front-page header#primary {
+  width: 100%;
+  max-width: 100%;
+  color: white;
+  background: black; }
+  body.is-front-page header#primary nav {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    border-bottom-color: white; }
+    body.is-front-page header#primary nav h1 a:link,
+    body.is-front-page header#primary nav h1 a:visited {
+      color: white; }
+    body.is-front-page header#primary nav ul#menu li a:hover,
+    body.is-front-page header#primary nav div#menu ul li a:hover {
+      color: white; }
+  body.is-front-page header#primary .solar-system {
+    margin: 32px auto; }
+  @media screen and (max-width: 600px) {
+    body.is-front-page header#primary .solar-system {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      display: none; }
+      body.is-front-page header#primary .solar-system#local {
+        display: block; }
+      body.is-front-page header#primary .solar-system .orbit {
+        float: left;
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: inset 0 0 8px #666666; }
+        body.is-front-page header#primary .solar-system .orbit#earth {
+          width: 0;
+          height: 0;
+          top: 100px;
+          left: 100px; }
+        body.is-front-page header#primary .solar-system .orbit#moon {
+          width: 150px;
+          height: 150px;
+          top: -75px;
+          left: -75px; }
+        body.is-front-page header#primary .solar-system .orbit .body {
+          width: 100%;
+          height: 0;
+          position: absolute;
+          background-color: rgba(0, 255, 0, 0.2);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; }
+          body.is-front-page header#primary .solar-system .orbit .body::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 50%; }
+          body.is-front-page header#primary .solar-system .orbit .body#earth {
+            top: 0;
+            animation: none; }
+            body.is-front-page header#primary .solar-system .orbit .body#earth:after {
+              background: linear-gradient(135deg, #5EFCE8 0%, #736EFE 100%);
+              width: 40px;
+              height: 40px;
+              top: -20px;
+              left: -20px; }
+          body.is-front-page header#primary .solar-system .orbit .body#moon {
+            top: 75px;
+            animation-duration: 15s;
+            animation-name: counter-clockwise; }
+            body.is-front-page header#primary .solar-system .orbit .body#moon:after {
+              background: linear-gradient(135deg, #ECF0F1 0%, #95A5A6 100%);
+              width: 15px;
+              height: 15px;
+              top: -7.5px;
+              left: -7.5px; } }
+  @media screen and (min-width: 601px) {
+    body.is-front-page header#primary .solar-system {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      display: none; }
+      body.is-front-page header#primary .solar-system#whole {
+        display: block; }
+      body.is-front-page header#primary .solar-system .orbit {
+        float: left;
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: inset 0 0 8px #666666; }
+        body.is-front-page header#primary .solar-system .orbit#sun {
+          width: 0;
+          height: 0;
+          top: 200px;
+          left: 200px; }
+        body.is-front-page header#primary .solar-system .orbit#mercury {
+          width: 120px;
+          height: 120px;
+          top: -60px;
+          left: -60px; }
+        body.is-front-page header#primary .solar-system .orbit#earth {
+          width: 300px;
+          height: 300px;
+          top: -150px;
+          left: -150px; }
+        body.is-front-page header#primary .solar-system .orbit#venus {
+          width: 210px;
+          height: 210px;
+          top: -105px;
+          left: -105px; }
+        body.is-front-page header#primary .solar-system .orbit#moon {
+          width: 30px;
+          height: 30px;
+          top: -15px;
+          left: -15px; }
+        body.is-front-page header#primary .solar-system .orbit .body {
+          width: 100%;
+          height: 0;
+          position: absolute;
+          background-color: rgba(0, 255, 0, 0.2);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; }
+          body.is-front-page header#primary .solar-system .orbit .body::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 50%; }
+          body.is-front-page header#primary .solar-system .orbit .body#sun {
+            top: 0;
+            animation: none; }
+            body.is-front-page header#primary .solar-system .orbit .body#sun:after {
+              background: linear-gradient(135deg, #FEC163 0%, #DE4313 100%);
+              width: 40px;
+              height: 40px;
+              top: -20px;
+              left: -20px; }
+          body.is-front-page header#primary .solar-system .orbit .body#mercury {
+            top: 60px;
+            animation-duration: 10s;
+            animation-name: counter-clockwise; }
+            body.is-front-page header#primary .solar-system .orbit .body#mercury:after {
+              background: linear-gradient(135deg, #ECF0F1 0%, #95A5A6 100%);
+              width: 6px;
+              height: 6px;
+              top: -3px;
+              left: -3px; }
+          body.is-front-page header#primary .solar-system .orbit .body#earth {
+            top: 150px;
+            animation-duration: 50s;
+            animation-name: counter-clockwise; }
+            body.is-front-page header#primary .solar-system .orbit .body#earth:after {
+              background: linear-gradient(135deg, #5EFCE8 0%, #736EFE 100%);
+              width: 10px;
+              height: 10px;
+              top: -5px;
+              left: -5px; }
+          body.is-front-page header#primary .solar-system .orbit .body#venus {
+            top: 105px;
+            animation-duration: 30s;
+            animation-name: counter-clockwise; }
+            body.is-front-page header#primary .solar-system .orbit .body#venus:after {
+              background: linear-gradient(135deg, #FAD7A1 0%, #E96D71 100%);
+              width: 9px;
+              height: 9px;
+              top: -4.5px;
+              left: -4.5px; }
+          body.is-front-page header#primary .solar-system .orbit .body#moon {
+            top: 15px;
+            animation-duration: 5s;
+            animation-name: counter-clockwise; }
+            body.is-front-page header#primary .solar-system .orbit .body#moon:after {
+              background: linear-gradient(135deg, #ECF0F1 0%, #95A5A6 100%);
+              width: 3px;
+              height: 3px;
+              top: -1.5px;
+              left: -1.5px; } }
 
 main {
   width: 100%;

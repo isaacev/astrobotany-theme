@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <?php
+
+     $social_thumbnail_url = get_template_directory_uri() . '/assets/default.png';
+
+    ?>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/default.png">
+    <meta property="og:image" content="<?php echo $social_thumbnail_url; ?>">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="1024">
+    <meta name="twitter:image" content="<?php echo $social_thumbnail_url; ?>"/>
     <title><?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
   </head>

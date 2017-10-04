@@ -77,6 +77,11 @@ header#primary {
       body.is-front-page header#primary nav h1 a:link,
       body.is-front-page header#primary nav h1 a:visited {
         color: white; }
+      body.is-front-page header#primary nav ul#menu li.current-menu-item a:link,
+      body.is-front-page header#primary nav ul#menu li.current-menu-item a:visited,
+      body.is-front-page header#primary nav div#menu ul li.current-menu-item a:link,
+      body.is-front-page header#primary nav div#menu ul li.current-menu-item a:visited {
+        color: white; }
       body.is-front-page header#primary nav ul#menu li a:hover,
       body.is-front-page header#primary nav div#menu ul li a:hover {
         color: white; }

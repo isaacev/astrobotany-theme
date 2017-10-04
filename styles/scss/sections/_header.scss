@@ -82,6 +82,11 @@ header#primary {
 
       ul#menu,
       div#menu ul {
+        li.current-menu-item a:link,
+        li.current-menu-item a:visited {
+          color: white;
+        }
+
         li a:hover {
           color: white;
         }

@@ -383,6 +383,8 @@ p.tags .tag {
     header#primary nav ul#menu,
     header#primary nav div#menu ul {
       margin-right: 32px; }
+    header#primary nav input#show-mobile-menu {
+      display: none; }
 
   main > article {
     padding: 32px; }
@@ -406,12 +408,49 @@ p.tags .tag {
     padding: 32px 32px; } }
 @media screen and (max-width: 736px) {
   header#primary nav {
-    padding: 16px 0; }
+    padding: 16px 0;
+    min-height: 32px;
+    height: auto; }
     header#primary nav h1 {
       margin-left: 16px; }
     header#primary nav ul#menu,
     header#primary nav div#menu ul {
-      margin-right: 16px; }
+      height: auto;
+      padding-top: 8px;
+      margin-left: 16px;
+      display: block;
+      float: none;
+      clear: both;
+      margin-right: 16px;
+      display: none; }
+      header#primary nav ul#menu li,
+      header#primary nav div#menu ul li {
+        margin-left: 0;
+        margin-right: 0;
+        display: block; }
+    header#primary nav input#show-mobile-menu,
+    header#primary nav label[for="show-mobile-mehu"] {
+      display: none; }
+    header#primary nav label[for="show-mobile-menu"]:after {
+      content: "\02630";
+      width: 32px;
+      height: 32px;
+      margin-right: 16px;
+      display: block;
+      float: right;
+      text-align: center;
+      line-height: 30px;
+      font-size: 22px;
+      color: #bfbfbf;
+      cursor: pointer; }
+    header#primary nav label[for="show-mobile-menu"]:hover:after {
+      color: black; }
+    header#primary nav input#show-mobile-menu:checked ~ label[for="show-mobile-menu"]:after {
+      content: "\000d7";
+      line-height: 30px;
+      font-size: 32px; }
+    header#primary nav input#show-mobile-menu:checked ~ div ul#menu, header#primary nav input#show-mobile-menu:checked ~ div div#menu ul {
+      display: block; }
 
   main > article {
     padding: 16px; }

@@ -12,5 +12,9 @@ header#primary {
     div#menu ul {
       margin-right: $layout-page-margin-wide;
     }
+
+    input#show-mobile-menu {
+      display: none;
+    }
   }
 }

@@ -10,6 +10,10 @@
     <header id="primary">
       <nav>
         <h1><a href="<?php echo get_site_url(); ?>">astrobotany</a></h1>
+
+        <input id="show-mobile-menu" type="checkbox">
+        <label for="show-mobile-menu"></label>
+
         <?php wp_nav_menu(array(
           'theme_location' => 'primary',
           'menu_id'        => 'menu',

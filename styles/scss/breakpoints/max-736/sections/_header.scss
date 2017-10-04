@@ -2,6 +2,15 @@
 
 header#primary {
   nav {
-    padding: 16px $layout-page-margin-narrow;
+    padding: 16px 0;
+
+    h1 {
+      margin-left: $layout-page-margin-narrow
+    }
+
+    ul#menu,
+    div#menu ul {
+      margin-right: $layout-page-margin-narrow;
+    }
   }
 }

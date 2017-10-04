@@ -21,9 +21,10 @@ header#primary {
   max-width: 1080px;
   margin: 0 auto; }
   header#primary nav {
-    height: 32px;
+    min-height: 32px;
     margin: 0;
-    border-bottom: 2px solid #d9d9d9; }
+    border-bottom: 2px solid #d9d9d9;
+    text-align: right; }
     header#primary nav h1 {
       height: 32px;
       margin: 0;
@@ -40,7 +41,7 @@ header#primary {
       height: 32px;
       margin: 0;
       padding: 0;
-      float: right;
+      display: inline-block;
       list-style: none; }
       header#primary nav ul#menu li,
       header#primary nav div#menu ul li {
@@ -422,7 +423,8 @@ p.tags .tag {
       float: none;
       clear: both;
       margin-right: 16px;
-      display: none; }
+      display: none;
+      text-align: left; }
       header#primary nav ul#menu li,
       header#primary nav div#menu ul li {
         margin-left: 0;

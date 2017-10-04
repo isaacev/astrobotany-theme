@@ -9,9 +9,10 @@ header#primary {
   margin: 0 auto;
 
   nav {
-    height: 32px;
+    min-height: 32px;
     margin: 0;
     border-bottom: 2px solid $color-strong-line;
+    text-align: right;
 
     h1 {
       height: 32px;
@@ -33,7 +34,7 @@ header#primary {
       height: 32px;
       margin: 0;
       padding: 0;
-      float: right;
+      display: inline-block;
       list-style: none;
 
       li {

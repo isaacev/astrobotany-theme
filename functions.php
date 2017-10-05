@@ -13,19 +13,19 @@ function enqueue_styles () {
   $handle = 'font-open-sans';
   $src    = 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
   $deps   = array();
-  $ver    = 'v1.0.0';
+  $ver    = false;
   wp_enqueue_style($handle, $src, $deps, $ver);
 
   $handle = 'font-lato';
   $src    = 'https://fonts.googleapis.com/css?family=Lato:400,400i,700';
   $deps   = array();
-  $ver    = 'v1.0.0';
+  $ver    = false;
   wp_enqueue_style($handle, $src, $deps, $ver);
 
   $handle = 'font-questrial';
   $src    = 'https://fonts.googleapis.com/css?family=Questrial';
   $deps   = array();
-  $ver    = 'v1.0.0';
+  $ver    = false;
   wp_enqueue_style($handle, $src, $deps, $ver);
 
   $handle = 'main';

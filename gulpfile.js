@@ -3,7 +3,7 @@ const zip  = require('gulp-zip')
 const sass = require('gulp-sass')
 const maps = require('gulp-sourcemaps')
 
-gulp.task('bundle', () => {
+gulp.task('zip', () => {
   const include = [
     '**/*.css',
     '**/*.php',

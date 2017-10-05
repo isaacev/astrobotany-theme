@@ -11,11 +11,13 @@ body {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
 @keyframes counter-clockwise {
   0% {
     transform: rotate(360deg); }
   100% {
     transform: rotate(0deg); } }
+
 header#primary {
   width: 100%;
   max-width: 1080px;
@@ -49,7 +51,8 @@ header#primary {
         display: inline-block;
         line-height: 32px;
         font-size: 1rem; }
-        header#primary nav ul#menu li.current-menu-item a:link, header#primary nav ul#menu li.current-menu-item a:visited,
+        header#primary nav ul#menu li.current-menu-item a:link,
+        header#primary nav ul#menu li.current-menu-item a:visited,
         header#primary nav div#menu ul li.current-menu-item a:link,
         header#primary nav div#menu ul li.current-menu-item a:visited {
           color: black; }
@@ -256,20 +259,25 @@ main {
 article.copy h1 {
   font-size: 2rem;
   margin: 0 0 16px; }
+
 article.copy h2 {
   font-size: 1.5rem;
   margin: 0 0 16px; }
+
 article.copy p {
   margin: 0 0 16px;
   line-height: 1.6; }
   article.copy p:last-child {
     margin-bottom: 0; }
-article.copy img, article.copy > img,
+
+article.copy img,
+article.copy > img,
 article.copy p img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 32px auto; }
+
 article.copy blockquote {
   margin: 32px 0;
   padding: 0 40px; }
@@ -277,6 +285,7 @@ article.copy blockquote {
     margin: 0;
     font-size: 1.2rem;
     line-height: 1.8rem; }
+
 article.copy div.wp-caption {
   max-width: 100%;
   margin: 32px 0; }
@@ -393,10 +402,8 @@ p.tags .tag {
       margin-right: 32px; }
     header#primary nav input#show-mobile-menu {
       display: none; }
-
   main > article {
     padding: 32px; }
-
   article.post {
     padding: 32px;
     padding-left: 0;
@@ -411,9 +418,9 @@ p.tags .tag {
         article.post aside p.tags a.tag {
           margin: 2px 0;
           display: inline-block; }
-
   header.page-header {
     padding: 32px 32px; } }
+
 @media screen and (max-width: 736px) {
   header#primary nav {
     padding: 16px 0;
@@ -458,12 +465,11 @@ p.tags .tag {
       content: "\000d7";
       line-height: 30px;
       font-size: 32px; }
-    header#primary nav input#show-mobile-menu:checked ~ div ul#menu, header#primary nav input#show-mobile-menu:checked ~ div div#menu ul {
+    header#primary nav input#show-mobile-menu:checked ~ div ul#menu,
+    header#primary nav input#show-mobile-menu:checked ~ div div#menu ul {
       display: block; }
-
   main > article {
     padding: 16px; }
-
   article.post {
     flex-direction: column;
     padding: 16px;
@@ -489,10 +495,8 @@ p.tags .tag {
         article.post aside p.tags a.tag {
           margin: 2px 0;
           display: inline-block; }
-
   header.page-header {
     padding: 32px 16px; }
-
   nav.pagination {
     margin: 16px auto; } }
 

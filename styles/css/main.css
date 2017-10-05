@@ -285,13 +285,15 @@ article.copy p img {
   article.copy img.alignright,
   article.copy > img.alignright,
   article.copy p img.alignright {
+    margin-right: 0;
     margin-left: auto; }
   article.copy img, article.copy img.alignright,
   article.copy > img,
   article.copy > img.alignright,
   article.copy p img,
   article.copy p img.alignright {
-    margin-right: auto; }
+    margin-right: auto;
+    margin-left: 0; }
 
 article.copy blockquote {
   margin: 32px 0;
@@ -316,9 +318,11 @@ article.copy div.wp-caption {
     margin-left: auto;
     margin-right: auto; }
   article.copy div.wp-caption.alignright {
+    margin-right: 0;
     margin-left: auto; }
   article.copy div.wp-caption, article.copy div.wp-caption.alignleft {
-    margin-right: auto; }
+    margin-right: auto;
+    margin-left: 0; }
 
 footer#primary {
   text-align: center; }

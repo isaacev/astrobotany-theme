@@ -34,12 +34,14 @@ article.copy {
     }
 
     &.alignright {
+      margin-right: 0;
       margin-left: auto;
     }
 
     &,
     &.alignright {
       margin-right: auto;
+      margin-left: 0;
     }
   }
 
@@ -76,12 +78,14 @@ article.copy {
     }
 
     &.alignright {
+      margin-right: 0;
       margin-left: auto;
     }
 
     &,
     &.alignleft {
       margin-right: auto;
+      margin-left: 0;
     }
   }
 }

@@ -27,6 +27,20 @@ article.copy {
     height: auto;
     display: block;
     margin: 32px auto;
+
+    &.aligncenter {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &.alignright {
+      margin-left: auto;
+    }
+
+    &,
+    &.alignright {
+      margin-right: auto;
+    }
   }
 
   blockquote {

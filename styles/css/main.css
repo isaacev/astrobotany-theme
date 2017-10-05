@@ -287,11 +287,11 @@ article.copy p img {
   article.copy p img.alignright {
     margin-right: 0;
     margin-left: auto; }
-  article.copy img, article.copy img.alignright,
+  article.copy img, article.copy img.alignleft,
   article.copy > img,
-  article.copy > img.alignright,
+  article.copy > img.alignleft,
   article.copy p img,
-  article.copy p img.alignright {
+  article.copy p img.alignleft {
     margin-right: auto;
     margin-left: 0; }
 

@@ -10,6 +10,13 @@ function astrobotany_setup () {
 add_action('after_setup_theme', 'astrobotany_setup');
 
 function enqueue_styles () {
+  /**
+   * WARNING:
+   * The gulp 'bump' task depends on this function to be formatted in
+   * a specific manner. Any changes to this function should be checked
+   * to make sure they don't break the 'bump' task.
+   */
+
   $handle = 'font-open-sans';
   $src    = 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
   $deps   = array();
@@ -31,7 +38,7 @@ function enqueue_styles () {
   $handle = 'main';
   $src    = get_template_directory_uri() . '/styles/css/main.css';
   $deps   = array('font-open-sans');
-  $ver    = 'v1.0.6';
+  $ver    = '1.0.6';
   wp_enqueue_style($handle, $src, $deps, $ver);
 }
 

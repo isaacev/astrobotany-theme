@@ -2,6 +2,7 @@ const gulp = require('gulp')
 const zip  = require('gulp-zip')
 const sass = require('gulp-sass')
 const maps = require('gulp-sourcemaps')
+const pkg  = require('./package.json')
 
 gulp.task('zip', () => {
   const include = [
@@ -16,7 +17,7 @@ gulp.task('zip', () => {
   ]
 
   gulp.src(include.concat(exclude.map(p => '!' + p)))
-      .pipe(zip('astrobotany-theme.zip'))
+      .pipe(zip(`./releases/astrobotany-theme-${pkg.version}.zip`))
       .pipe(gulp.dest('.'))
 })
 

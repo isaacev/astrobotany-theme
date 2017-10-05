@@ -17,7 +17,7 @@ gulp.task('zip', () => {
   ]
 
   gulp.src(include.concat(exclude.map(p => '!' + p)))
-      .pipe(zip(`./releases/astrobotany-theme-${pkg.version}.zip`))
+      .pipe(zip(`./releases/astrobotany-theme.zip`))
       .pipe(gulp.dest('.'))
 })
 

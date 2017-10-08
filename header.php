@@ -9,7 +9,7 @@
   <body <?php body_class(is_front_page() ? 'is-front-page' : false); ?>>
     <header id="primary">
       <nav>
-        <h1><a href="<?php echo get_site_url(); ?>">astrobotany</a></h1>
+        <h1><a href="<?php echo get_site_url(); ?>">astrobotany.com</a></h1>
 
         <input id="show-mobile-menu" type="checkbox">
         <label for="show-mobile-menu"></label>

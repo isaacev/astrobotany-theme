@@ -1,3 +1,117 @@
+@import '../vars/layouts';
+@import '../vars/colors';
+@import '../vars/fonts';
+@import '../vars/icons';
+
 footer#primary {
-  text-align: center;
+  background-color: $color-dim-white;
+
+  nav {
+    max-width: $layout-page-max-width;
+    margin: 32px auto 0;
+    display: flex;
+    flex-flow: row;
+
+    div.panel {
+      min-width: 200px;
+      padding: 16px;
+      border-top: 2px solid $color-gray;
+      flex-grow: 1;
+      flex-basis: 100%;
+      color: $color-dark-gray;
+
+      h2 {
+        margin: 0;
+        padding: 0;
+        font-family: $font-face-branded;
+      }
+    }
+
+    a:link,
+    a:visited {
+      color: $color-dark-gray;
+      text-decoration: none;
+    }
+
+    a:focus,
+    a:hover,
+    a:active {
+      color: black;
+    }
+
+    p#copyright {
+      margin: 16px 0;
+    }
+
+    ul {
+      margin: 16px 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        min-height: 32px;
+        margin: 0;
+        padding: 0;
+        line-height: 32px;
+
+        a {
+          height: 32px;
+          display: block;
+        }
+      }
+    }
+
+    ul#menu li {
+      &.current-menu-item a:link,
+      &.current-menu-item a:visited {
+        color: black;
+      }
+
+      a:link,
+      a:visited {
+        height: 32px;
+        display: block;
+      }
+    }
+
+    ul#social li {
+      &:hover div.social-link.site-facebook {
+        background-image: $icon-facebook-black;
+      }
+
+      &:hover div.social-link.site-twitter {
+        background-image: $icon-twitter-black;
+      }
+
+      &:hover div.social-link.site-linkedin {
+        background-image: $icon-linkedin-black;
+      }
+
+      div.social-link {
+        width: 24px;
+        height: 32px;
+        float: left;
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &.site-facebook {
+          background-image: $icon-facebook-gray;
+        }
+
+        &.site-twitter {
+          background-image: $icon-twitter-gray;
+        }
+
+        &.site-linkedin {
+          background-image: $icon-linkedin-gray;
+        }
+      }
+
+      span {
+        line-height: 32px;
+        margin-left: 8px;
+      }
+    }
+  }
 }

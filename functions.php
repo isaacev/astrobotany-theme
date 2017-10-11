@@ -4,10 +4,51 @@ function astrobotany_setup () {
   $loc  = 'primary';
   $desc = 'Navigation menu in header of each page';
   register_nav_menu($loc, $desc);
+
+  $loc  = 'footer';
+  $desc = 'Supplementary links in the footer of each page';
+  register_nav_menu($loc, $desc);
+
   add_theme_support('html5');
 }
 
 add_action('after_setup_theme', 'astrobotany_setup');
+
+function astrobotany_customize ($wp_customize) {
+  $wp_customize->add_section('astrobotany_social', [
+    'title'    => 'Social Links',
+    'priority' => 200,
+  ]);
+
+  $wp_customize->add_setting('astrobotany_social[facebook]', [
+    'sanitize_callback' => 'esc_url_raw',
+  ]);
+
+  $wp_customize->add_control('astrobotany_social[facebook]', [
+    'section' => 'astrobotany_social',
+    'label'   => 'Facebook URL',
+  ]);
+
+  $wp_customize->add_setting('astrobotany_social[twitter]', [
+    'sanitize_callback' => 'esc_url_raw',
+  ]);
+
+  $wp_customize->add_control('astrobotany_social[twitter]', [
+    'section' => 'astrobotany_social',
+    'label'   => 'Twitter URL',
+  ]);
+
+  $wp_customize->add_setting('astrobotany_social[linkedin]', [
+    'sanitize_callback' => 'esc_url_raw',
+  ]);
+
+  $wp_customize->add_control('astrobotany_social[linkedin]', [
+    'section' => 'astrobotany_social',
+    'label'   => 'LinkedIn URL',
+  ]);
+}
+
+add_action('customize_register', 'astrobotany_customize');
 
 function enqueue_styles () {
   /**
@@ -38,7 +79,7 @@ function enqueue_styles () {
   $handle = 'main';
   $src    = get_template_directory_uri() . '/styles/css/main.css';
   $deps   = array('font-open-sans');
-  $ver    = '1.0.6';
+  $ver    = '1.0.7';
   wp_enqueue_style($handle, $src, $deps, $ver);
 }
 
@@ -198,4 +239,23 @@ function print_tags () {
   }
 
   echo '</p>';
+}
+
+function print_social_link ($name, $args = []) {
+  $all_links = get_theme_mod('astrobotany_social');
+
+  if ($all_links && array_key_exists($name, $all_links)) {
+    $link = $all_links[$name];
+    if (array_key_exists('before', $args)) {
+      echo $args['before'];
+    }
+
+    echo '<a href="' . esc_html($link) . '">';
+    echo array_key_exists('inner', $args) ? $args['inner'] : esc_html($name);
+    echo '</a>';
+
+    if (array_key_exists('after', $args)) {
+      echo $args['after'];
+    }
+  }
 }

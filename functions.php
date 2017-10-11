@@ -79,7 +79,7 @@ function enqueue_styles () {
   $handle = 'main';
   $src    = get_template_directory_uri() . '/styles/css/main.css';
   $deps   = array('font-open-sans');
-  $ver    = '1.0.8';
+  $ver    = '1.0.9';
   wp_enqueue_style($handle, $src, $deps, $ver);
 }
 
@@ -244,7 +244,7 @@ function print_tags () {
 function print_social_link ($name, $args = []) {
   $all_links = get_theme_mod('astrobotany_social');
 
-  if ($all_links && array_key_exists($name, $all_links)) {
+  if ($all_links && array_key_exists($name, $all_links) && $all_links[$name] != '') {
     $link = $all_links[$name];
     if (array_key_exists('before', $args)) {
       echo $args['before'];

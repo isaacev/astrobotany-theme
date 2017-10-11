@@ -79,7 +79,7 @@ function enqueue_styles () {
   $handle = 'main';
   $src    = get_template_directory_uri() . '/styles/css/main.css';
   $deps   = array('font-open-sans');
-  $ver    = '1.0.7';
+  $ver    = '1.0.8';
   wp_enqueue_style($handle, $src, $deps, $ver);
 }
 

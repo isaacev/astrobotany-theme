@@ -4,7 +4,8 @@ body {
   flex-flow: column;
   margin: 0;
   font-size: 16px;
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  background-color: white; }
 
 @keyframes clockwise {
   0% {

@@ -38,7 +38,7 @@ After the theme has been modified it can be uploaded to a WordPress installation
 - `./style.css`
 - `./screenshot.png`
 
-If some file not matching this pattern should be included in future versions of the archive, add the appropriate file pattern to the list of patterns in `gulpfile.js`.
+If some file not matching these patterns should be included in future versions of the archive, add the appropriate file pattern to the list of patterns in `gulpfile.js`.
 
 ### Changes to the CSS
 After a change to the theme's SCSS files, running `gulp css` will compile the SCSS to CSS. During development where many changes will be made to the theme's SCSS files, it may be helpful to run `gulp css:watch` which will re-run the `css` task every time a SCSS file changes.

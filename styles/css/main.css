@@ -342,7 +342,8 @@ footer#primary {
       footer#primary nav div.panel h2 {
         margin: 0;
         padding: 0;
-        font-family: "Questrial", "Futura", sans-serif; }
+        font-family: "Questrial", "Futura", sans-serif;
+        font-size: 1.5rem; }
     footer#primary nav a:link,
     footer#primary nav a:visited {
       color: gray;

@@ -37,3 +37,18 @@ The contents of the menu can be changed at any time by navigating back to the me
 ### Home Page
 
 [Create a page](https://codex.wordpress.org/Pages) titled "Home" with contents for the front page of the site. Navigate to the Settings&rarr;Reading page. Under the section labled `Front page displays` from the dropdown labled `Front page` select the "Home" page. Click `Save Changes`. Now the page at `astrobotany.com/` will show any contents added to the "Home" page.
+
+## Building Theme from source
+After the theme has been modified it can be uploaded to a WordPress installation after it has been compressed to a `.zip` file. This compression process has been automated by the `gulp zip` task which creates a ZIP archive including only files matching the following patterns:
+
+- `**/*.css`
+- `**/*.php`
+- `./style.css`
+- `./screenshot.png`
+
+If some file not matching this pattern should be included in future versions of the archive, add the appropriate file pattern to the list of patterns in `gulpfile.js`.
+
+### Changes to the CSS
+After a change to the theme's SCSS files, running `gulp css` will compile the SCSS to CSS. During development where many changes will be made to the theme's SCSS files, it may be helpful to run `gulp css:watch` which will re-run the `css` task every time a SCSS file changes.
+
+If there were changes to the theme's CSS it is important that the theme patch number is incremented. This will force any browsers that had viewed previous versions of the theme to updated their cached CSS files with the updated CSS files. The patch number can be automatically incremented by running the `gulp bump` task. Be sure to run this task before the `gulp zip` task so that the updated version number is included in the new theme ZIP file.

@@ -1,0 +1,125 @@
+section.comments {
+  $border-color  : #CCC;
+  $border-width  : 1px;
+  $border-radius : 3px;
+  $border        : $border-width solid $border-color;
+
+  margin: 0 32px;
+
+  ol.comment-list {
+    margin: 32px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li.comment {
+    &:before {
+      content: "";
+      width: $border-width;
+      height: 16px;
+      margin-left: 32px;
+      display: block;
+      background: $border-color;
+    }
+
+    &:last-child {
+      div.reply-toggle-label {
+        border-left: none;
+      }
+
+      ol.comment-children {
+        border-left: none;
+        padding-left: 32px;
+      }
+    }
+
+    article.comment-body {
+      border: $border;
+      border-radius: $border-radius;
+
+      img.author-avatar {
+        margin: 16px 0 0 32px;
+        float: left;
+        border-radius: $border-radius;
+
+        & ~ p.comment-meta,
+        & ~ div.comment-content {
+          margin-left: 32px + 60px + 32px;
+        }
+      }
+
+      p.comment-meta {
+        margin: 16px 0;
+        font-size: 16px;
+      }
+
+      div.comment-content {
+        margin-right: 32px;
+        padding-bottom: 16px;
+      }
+
+      div.comment-tools {
+        display: none;
+      }
+    }
+
+    input.reply-toggle {
+      display: none;
+
+      & ~ div.reply-toggle-label label:before {
+        content: "show ";
+      }
+
+      &:checked ~ div.reply-toggle-label {
+        height: 0;
+
+        label:before {
+          content: "hide ";
+        }
+      }
+
+      &:checked ~ ol.comment-children {
+        display: block;
+      }
+    }
+
+    div.reply-toggle-label {
+      height: 16px;
+      margin-left: 32px;
+      text-align: right;
+      border-left: $border;
+
+      label {
+        height: 14px;
+        position: relative;
+        top: -16px;
+        margin-right: 32px;
+        padding: 8px 16px;
+        display: inline-block;
+        border: $border;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 14px;
+        color: darken($border-color, 20%);
+        cursor: pointer;
+        background: white;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+
+    ol.comment-children {
+      display: none;
+      margin: 0 0 0 32px;
+      padding: 0 0 0 32px - $border-width;
+      list-style: none;
+      border-left: $border;
+
+      li.comment:first-child:before {
+        height: 32px;
+      }
+    }
+  }
+}

@@ -515,7 +515,92 @@ p.tags .tag {
     text-decoration: none; }
 
 section.comments {
-  margin: 0 32px; }
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; }
+  section.comments div.comment-respond {
+    border: 1px solid #dfdfdf;
+    border-radius: 3px; }
+    section.comments div.comment-respond h3.comment-reply-title {
+      margin: 16px 0 0 0;
+      padding: 0;
+      text-align: center; }
+    section.comments div.comment-respond form.comment-form p.logged-in-as,
+    section.comments div.comment-respond form.comment-form p.comment-notes {
+      text-align: center; }
+    section.comments div.comment-respond form.comment-form p.comment-form-comment {
+      margin: 32px;
+      padding: 0; }
+      section.comments div.comment-respond form.comment-form p.comment-form-comment label {
+        margin-bottom: 8px;
+        display: block; }
+      section.comments div.comment-respond form.comment-form p.comment-form-comment textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        height: 96px;
+        min-height: 96px;
+        margin: 0;
+        padding: 16px;
+        display: block;
+        border: 1px solid #dfdfdf;
+        border-radius: 3px;
+        background: #F5F5F5;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-family: inherit; }
+        section.comments div.comment-respond form.comment-form p.comment-form-comment textarea:focus {
+          outline: none;
+          background: white;
+          border-color: #c6c6c6; }
+    section.comments div.comment-respond form.comment-form p.comment-form-author,
+    section.comments div.comment-respond form.comment-form p.comment-form-email,
+    section.comments div.comment-respond form.comment-form p.comment-form-url {
+      margin: 32px;
+      padding: 0; }
+      section.comments div.comment-respond form.comment-form p.comment-form-author label,
+      section.comments div.comment-respond form.comment-form p.comment-form-email label,
+      section.comments div.comment-respond form.comment-form p.comment-form-url label {
+        margin-bottom: 8px;
+        display: block; }
+      section.comments div.comment-respond form.comment-form p.comment-form-author input,
+      section.comments div.comment-respond form.comment-form p.comment-form-email input,
+      section.comments div.comment-respond form.comment-form p.comment-form-url input {
+        width: 100%;
+        margin: 0;
+        padding: 8px 12px;
+        border: 1px solid #dfdfdf;
+        border-radius: 3px;
+        background: #F5F5F5;
+        box-sizing: border-box;
+        font-size: 18px; }
+        section.comments div.comment-respond form.comment-form p.comment-form-author input:focus,
+        section.comments div.comment-respond form.comment-form p.comment-form-email input:focus,
+        section.comments div.comment-respond form.comment-form p.comment-form-url input:focus {
+          outline: none;
+          background: white;
+          border-color: #c6c6c6; }
+    section.comments div.comment-respond form.comment-form p.form-submit {
+      margin: 0 31px;
+      padding: 0;
+      float: right;
+      position: relative;
+      top: -16px; }
+      section.comments div.comment-respond form.comment-form p.form-submit input.submit {
+        display: block;
+        height: 32px;
+        padding: 8px 16px;
+        background: white;
+        border: 1px solid #dfdfdf;
+        border-radius: 3px;
+        font-size: 14px;
+        line-height: 14px;
+        font-family: inherit;
+        color: gray;
+        text-transform: lowercase;
+        cursor: pointer; }
+        section.comments div.comment-respond form.comment-form p.form-submit input.submit:hover {
+          color: black; }
   section.comments ol.comment-list {
     margin: 32px 0;
     padding: 0;
@@ -526,14 +611,14 @@ section.comments {
     height: 16px;
     margin-left: 32px;
     display: block;
-    background: #CCC; }
+    background: #dfdfdf; }
   section.comments li.comment:last-child div.reply-toggle-label {
     border-left: none; }
   section.comments li.comment:last-child ol.comment-children {
     border-left: none;
     padding-left: 32px; }
   section.comments li.comment article.comment-body {
-    border: 1px solid #CCC;
+    border: 1px solid #dfdfdf;
     border-radius: 3px; }
     section.comments li.comment article.comment-body img.author-avatar {
       margin: 16px 0 0 32px;
@@ -564,7 +649,7 @@ section.comments {
     height: 16px;
     margin-left: 32px;
     text-align: right;
-    border-left: 1px solid #CCC; }
+    border-left: 1px solid #dfdfdf; }
     section.comments li.comment div.reply-toggle-label label {
       height: 14px;
       position: relative;
@@ -572,11 +657,11 @@ section.comments {
       margin-right: 32px;
       padding: 8px 16px;
       display: inline-block;
-      border: 1px solid #CCC;
+      border: 1px solid #dfdfdf;
       border-radius: 4px;
       font-size: 14px;
       line-height: 14px;
-      color: #999999;
+      color: gray;
       cursor: pointer;
       background: white; }
       section.comments li.comment div.reply-toggle-label label:hover {
@@ -586,7 +671,7 @@ section.comments {
     margin: 0 0 0 32px;
     padding: 0 0 0 31px;
     list-style: none;
-    border-left: 1px solid #CCC; }
+    border-left: 1px solid #dfdfdf; }
     section.comments li.comment ol.comment-children li.comment:first-child:before {
       height: 32px; }
 

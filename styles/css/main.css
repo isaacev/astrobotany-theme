@@ -257,75 +257,103 @@ main {
   main > article p {
     line-height: 30px; }
 
-article.copy h1 {
-  font-size: 2rem;
-  margin: 0 0 16px; }
-
-article.copy h2 {
-  font-size: 1.5rem;
-  margin: 0 0 16px; }
-
-article.copy p {
-  margin: 0 0 16px;
+div.copy,
+article.copy {
   font-size: 18px;
   line-height: 30px;
   font-family: georgia, serif; }
-  article.copy p:last-child {
-    margin-bottom: 0; }
-
-article.copy img,
-article.copy > img,
-article.copy p img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 32px auto; }
-  article.copy img.aligncenter,
-  article.copy > img.aligncenter,
-  article.copy p img.aligncenter {
-    margin-left: auto;
-    margin-right: auto; }
-  article.copy img.alignright,
-  article.copy > img.alignright,
-  article.copy p img.alignright {
-    margin-right: 0;
-    margin-left: auto; }
-  article.copy img, article.copy img.alignleft,
+  div.copy h1,
+  article.copy h1 {
+    font-size: 2rem;
+    margin: 0 0 16px; }
+  div.copy h2,
+  article.copy h2 {
+    font-size: 1.5rem;
+    margin: 0 0 16px; }
+  div.copy p,
+  article.copy p {
+    margin: 0 0 16px;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: georgia, serif; }
+    div.copy p:last-child,
+    article.copy p:last-child {
+      margin-bottom: 0; }
+  div.copy img,
+  div.copy > img,
+  div.copy p img,
+  article.copy img,
   article.copy > img,
-  article.copy > img.alignleft,
-  article.copy p img,
-  article.copy p img.alignleft {
-    margin-right: auto;
-    margin-left: 0; }
-
-article.copy blockquote {
-  margin: 32px 0;
-  padding: 0 40px; }
-  article.copy blockquote p {
-    margin: 0;
-    font-size: 1.2rem;
-    line-height: 1.8rem; }
-
-article.copy div.wp-caption {
-  max-width: 100%;
-  margin: 32px 0; }
-  article.copy div.wp-caption img {
-    width: 100%;
+  article.copy p img {
+    max-width: 100%;
     height: auto;
-    display: block; }
-  article.copy div.wp-caption .wp-caption-text {
-    margin-top: 8px;
-    font-style: italic;
-    text-align: center; }
-  article.copy div.wp-caption.aligncenter {
-    margin-left: auto;
-    margin-right: auto; }
-  article.copy div.wp-caption.alignright {
-    margin-right: 0;
-    margin-left: auto; }
-  article.copy div.wp-caption, article.copy div.wp-caption.alignleft {
-    margin-right: auto;
-    margin-left: 0; }
+    display: block;
+    margin: 32px auto; }
+    div.copy img.aligncenter,
+    div.copy > img.aligncenter,
+    div.copy p img.aligncenter,
+    article.copy img.aligncenter,
+    article.copy > img.aligncenter,
+    article.copy p img.aligncenter {
+      margin-left: auto;
+      margin-right: auto; }
+    div.copy img.alignright,
+    div.copy > img.alignright,
+    div.copy p img.alignright,
+    article.copy img.alignright,
+    article.copy > img.alignright,
+    article.copy p img.alignright {
+      margin-right: 0;
+      margin-left: auto; }
+    div.copy img, div.copy img.alignleft,
+    div.copy > img,
+    div.copy > img.alignleft,
+    div.copy p img,
+    div.copy p img.alignleft,
+    article.copy img,
+    article.copy img.alignleft,
+    article.copy > img,
+    article.copy > img.alignleft,
+    article.copy p img,
+    article.copy p img.alignleft {
+      margin-right: auto;
+      margin-left: 0; }
+  div.copy blockquote,
+  article.copy blockquote {
+    margin: 32px 0;
+    padding: 0 40px; }
+    div.copy blockquote p,
+    article.copy blockquote p {
+      margin: 0;
+      font-size: 1.2rem;
+      line-height: 1.8rem; }
+  div.copy div.wp-caption,
+  article.copy div.wp-caption {
+    max-width: 100%;
+    margin: 32px 0; }
+    div.copy div.wp-caption img,
+    article.copy div.wp-caption img {
+      width: 100%;
+      height: auto;
+      display: block; }
+    div.copy div.wp-caption .wp-caption-text,
+    article.copy div.wp-caption .wp-caption-text {
+      margin-top: 8px;
+      font-style: italic;
+      text-align: center; }
+    div.copy div.wp-caption.aligncenter,
+    article.copy div.wp-caption.aligncenter {
+      margin-left: auto;
+      margin-right: auto; }
+    div.copy div.wp-caption.alignright,
+    article.copy div.wp-caption.alignright {
+      margin-right: 0;
+      margin-left: auto; }
+    div.copy div.wp-caption, div.copy div.wp-caption.alignleft,
+    article.copy div.wp-caption,
+    article.copy div.wp-caption.alignleft {
+      margin-right: auto;
+      margin-left: 0; }
 
 footer#primary {
   background-color: #f2f2f2; }

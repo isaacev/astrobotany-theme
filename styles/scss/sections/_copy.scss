@@ -2,8 +2,8 @@
 
 div.copy,
 article.copy {
-  font-size: $font-size-default;
-  line-height: $line-height-default;
+  font-size: $font-size-copy;
+  line-height: $line-height-copy;
   font-family: $font-face-copy;
 
   h1 {
@@ -18,8 +18,8 @@ article.copy {
 
   p {
     margin: 0 0 16px;
-    font-size: $font-size-default;
-    line-height: $line-height-default;
+    font-size: $font-size-copy;
+    line-height: $line-height-copy;
     font-family: $font-face-copy;
 
     &:last-child {

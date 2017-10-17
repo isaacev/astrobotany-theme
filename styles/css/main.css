@@ -3,7 +3,7 @@ body {
   display: flex;
   flex-flow: column;
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Lato", sans-serif;
   background-color: white; }
 
@@ -454,7 +454,7 @@ section.author {
     padding: 0;
     font-size: 2rem; }
     section.author h1 span.all-posts-by {
-      font-size: 18px;
+      font-size: 16px;
       color: gray;
       display: block; }
     section.author h1 a:link,
@@ -473,7 +473,7 @@ header.page-header {
     font-size: 2rem; }
     header.page-header h1 span.subheader {
       display: block;
-      font-size: 18px;
+      font-size: 16px;
       color: #bfbfbf; }
 
 nav.pagination {

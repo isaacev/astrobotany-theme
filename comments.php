@@ -5,7 +5,7 @@ class comment_walker extends Walker_Comment {
     echo '<ol class="comment-list">';
   }
 
-  function start_el (&$output, $comment, $depth, $args) {
+  function start_el (&$output, $comment, $depth=0, $args=[], $id=0) {
     $GLOBALS['comment'] = $comment;
     $depth++;
 
@@ -42,15 +42,15 @@ class comment_walker extends Walker_Comment {
     <?php
   }
 
-  function start_lvl (&$output, $depth, $args) {
+  function start_lvl (&$output, $depth=0, $args=[], $id=0) {
     echo '<ol class="comment-children">';
   }
 
-  function end_lvl (&$output, $depth, $args) {
+  function end_lvl (&$output, $depth=0, $args=[], $id=0) {
     echo '</ol>';
   }
 
-  function end_el (&$output, $comment, $depth, $args) {
+  function end_el (&$output, $comment, $depth=0, $args=[], $id=0) {
     echo '</li>';
   }
 

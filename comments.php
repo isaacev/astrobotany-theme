@@ -20,14 +20,12 @@ class comment_walker extends Walker_Comment {
           <img class="author-avatar" src="http://via.placeholder.com/60x60">
           <p class="comment-meta">
             <a class="comment-author" href="#"><?php echo $author_name; ?></a>
-            &mdash;
             <span class="comment-timestamp"><?php comment_date('g:ia M j<\s\u\p>S</\s\u\p> Y'); ?></span>
             <?php comment_reply_link([
               'depth'     => $depth,
               'max_depth' => $args['max_depth'],
             ]); ?>
             <?php if ($parent != '0'): ?>
-              &mdash;
               <a href="#comment-<?php echo $parent; ?>">Parent</a>
             <?php endif; ?>
           </p>

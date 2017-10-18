@@ -1,6 +1,6 @@
 <?php
 
-class comment_walker extends Walker_Comment {
+class AstrobotanyCommentWalker extends Walker_Comment {
   function __construct() {
     echo '<ol class="comment-list">';
   }
@@ -63,7 +63,7 @@ class comment_walker extends Walker_Comment {
   <?php comment_form(); ?>
   <?php if (have_comments()): ?>
     <?php wp_list_comments([
-      'walker'    => new comment_walker,
+      'walker'    => new AstrobotanyCommentWalker,
       'max_depth' => 5,
     ]); ?>
   <?php else: ?>

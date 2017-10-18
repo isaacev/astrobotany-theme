@@ -31,6 +31,8 @@ The contents of the menu can be changed at any time by navigating back to the me
 [Create a page](https://codex.wordpress.org/Pages) titled "Home" with contents for the front page of the site. Navigate to the Settings&rarr;Reading page. Under the section labled `Front page displays` from the dropdown labled `Front page` select the "Home" page. Click `Save Changes`. Now the page at `astrobotany.com/` will show any contents added to the "Home" page.
 
 ## Building Theme from source
+In order to develop the theme, download a copy of the most recent version of the source from this repository and once that has completed run `npm install` from inside the source directory to install the NPM packages required for building the theme.
+
 After the theme has been modified it can be uploaded to a WordPress installation after it has been compressed to a `.zip` file. This compression process has been automated by the `gulp zip` task which creates a ZIP archive including only files matching the following patterns:
 
 - `**/*.css`

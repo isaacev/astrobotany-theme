@@ -55,6 +55,19 @@ function astrobotany_customize ($wp_customize) {
     'section' => 'astrobotany_social',
     'label'   => 'Instagram URL',
   ]);
+
+  $wp_customize->add_section('astrobotany_post', [
+    'title'    => 'Posts',
+    'priority' => 201,
+  ]);
+
+  $wp_customize->add_setting('astrobotany_post[hide_comments]');
+
+  $wp_customize->add_control('astrobotany_post[hide_comments]', [
+    'section' => 'astrobotany_post',
+    'label'   => 'Hide comment list and comment form on posts',
+    'type'    => 'checkbox',
+  ]);
 }
 
 add_action('customize_register', 'astrobotany_customize');
@@ -93,6 +106,28 @@ function enqueue_styles () {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_styles');
+
+function astrobotany_comments_open () {
+  $post_settings = get_theme_mod('astrobotany_post');
+
+  if ($post_settings['hide_comments'] === false) {
+    return true;
+  }
+
+  return false;
+}
+
+add_filter('comments_open', 'astrobotany_comments_open', 10, 2);
+
+function my_comments_open( $open, $post_id ) {
+
+  $post = get_post( $post_id );
+
+  if ( 'page' == $post->post_type )
+    $open = false;
+
+  return $open;
+}
 
 function page_header ($args) {
   echo '<header class="page-header">';

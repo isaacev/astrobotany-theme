@@ -64,13 +64,15 @@ class AstrobotanyCommentWalker extends Walker_Comment {
 
 ?>
 
-<section class="comments">
-  <h2 class="comment-header"><?php comments_number('no comments yet', '1 comment', '% comments'); ?></h2>
-  <?php if (have_comments()): ?>
-    <?php wp_list_comments([
-      'walker'    => new AstrobotanyCommentWalker,
-      'max_depth' => 5,
-    ]); ?>
-  <?php endif; ?>
-  <?php comment_form(); ?>
-</section>
+<?php if (comments_open()): ?>
+  <section class="comments">
+    <h2 class="comment-header"><?php comments_number('no comments yet', '1 comment', '% comments'); ?></h2>
+    <?php if (have_comments()): ?>
+      <?php wp_list_comments([
+        'walker'    => new AstrobotanyCommentWalker,
+        'max_depth' => 5,
+      ]); ?>
+    <?php endif; ?>
+    <?php comment_form(); ?>
+  </section>
+<?php endif; ?>

@@ -518,9 +518,17 @@ section.comments {
   width: 100%;
   max-width: 600px;
   margin: 0 auto; }
+  section.comments h2.comment-header {
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+    section.comments h2.comment-header + div.comment-respond {
+      margin-top: 16px; }
   section.comments div.comment-respond {
     border: 1px solid #dfdfdf;
-    border-radius: 3px; }
+    border-radius: 3px;
+    padding-bottom: 16px;
+    margin-bottom: 48px; }
     section.comments div.comment-respond h3.comment-reply-title {
       margin: 16px 0 0 0;
       padding: 0;
@@ -528,12 +536,21 @@ section.comments {
     section.comments div.comment-respond form.comment-form p.logged-in-as,
     section.comments div.comment-respond form.comment-form p.comment-notes {
       text-align: center; }
+    section.comments div.comment-respond form.comment-form p.comment-form-author,
+    section.comments div.comment-respond form.comment-form p.comment-form-email,
+    section.comments div.comment-respond form.comment-form p.comment-form-url,
     section.comments div.comment-respond form.comment-form p.comment-form-comment {
-      margin: 32px;
+      margin: 0 32px 16px;
       padding: 0; }
+      section.comments div.comment-respond form.comment-form p.comment-form-author label,
+      section.comments div.comment-respond form.comment-form p.comment-form-email label,
+      section.comments div.comment-respond form.comment-form p.comment-form-url label,
       section.comments div.comment-respond form.comment-form p.comment-form-comment label {
         margin-bottom: 8px;
         display: block; }
+      section.comments div.comment-respond form.comment-form p.comment-form-author textarea,
+      section.comments div.comment-respond form.comment-form p.comment-form-email textarea,
+      section.comments div.comment-respond form.comment-form p.comment-form-url textarea,
       section.comments div.comment-respond form.comment-form p.comment-form-comment textarea {
         width: 100%;
         max-width: 100%;
@@ -541,7 +558,7 @@ section.comments {
         height: 96px;
         min-height: 96px;
         margin: 0;
-        padding: 16px;
+        padding: 8px;
         display: block;
         border: 1px solid #dfdfdf;
         border-radius: 3px;
@@ -549,26 +566,20 @@ section.comments {
         box-sizing: border-box;
         font-size: 18px;
         font-family: inherit; }
+        section.comments div.comment-respond form.comment-form p.comment-form-author textarea:focus,
+        section.comments div.comment-respond form.comment-form p.comment-form-email textarea:focus,
+        section.comments div.comment-respond form.comment-form p.comment-form-url textarea:focus,
         section.comments div.comment-respond form.comment-form p.comment-form-comment textarea:focus {
           outline: none;
           background: white;
           border-color: #c6c6c6; }
-    section.comments div.comment-respond form.comment-form p.comment-form-author,
-    section.comments div.comment-respond form.comment-form p.comment-form-email,
-    section.comments div.comment-respond form.comment-form p.comment-form-url {
-      margin: 32px;
-      padding: 0; }
-      section.comments div.comment-respond form.comment-form p.comment-form-author label,
-      section.comments div.comment-respond form.comment-form p.comment-form-email label,
-      section.comments div.comment-respond form.comment-form p.comment-form-url label {
-        margin-bottom: 8px;
-        display: block; }
       section.comments div.comment-respond form.comment-form p.comment-form-author input,
       section.comments div.comment-respond form.comment-form p.comment-form-email input,
-      section.comments div.comment-respond form.comment-form p.comment-form-url input {
+      section.comments div.comment-respond form.comment-form p.comment-form-url input,
+      section.comments div.comment-respond form.comment-form p.comment-form-comment input {
         width: 100%;
         margin: 0;
-        padding: 8px 12px;
+        padding: 8px;
         border: 1px solid #dfdfdf;
         border-radius: 3px;
         background: #F5F5F5;
@@ -576,16 +587,15 @@ section.comments {
         font-size: 18px; }
         section.comments div.comment-respond form.comment-form p.comment-form-author input:focus,
         section.comments div.comment-respond form.comment-form p.comment-form-email input:focus,
-        section.comments div.comment-respond form.comment-form p.comment-form-url input:focus {
+        section.comments div.comment-respond form.comment-form p.comment-form-url input:focus,
+        section.comments div.comment-respond form.comment-form p.comment-form-comment input:focus {
           outline: none;
           background: white;
           border-color: #c6c6c6; }
     section.comments div.comment-respond form.comment-form p.form-submit {
       margin: 0 31px;
       padding: 0;
-      float: right;
-      position: relative;
-      top: -16px; }
+      float: right; }
       section.comments div.comment-respond form.comment-form p.form-submit input.submit {
         display: block;
         height: 32px;
@@ -605,6 +615,8 @@ section.comments {
     margin: 32px 0;
     padding: 0;
     list-style: none; }
+    section.comments ol.comment-list > li.comment:first-child:before {
+      display: none; }
   section.comments li.comment:before {
     content: "";
     width: 1px;

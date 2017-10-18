@@ -21,6 +21,8 @@ section.comments {
   div.comment-respond {
     border: $border;
     border-radius: $border-radius;
+    padding-bottom: 16px;
+    margin-bottom: 16px + 32px;
 
     h3.comment-reply-title {
       margin: 16px 0 0 0;
@@ -34,8 +36,12 @@ section.comments {
         text-align: center;
       }
 
+
+      p.comment-form-author,
+      p.comment-form-email,
+      p.comment-form-url,
       p.comment-form-comment {
-        margin: 32px;
+        margin: 0 32px 16px;
         padding: 0;
 
         label {
@@ -50,7 +56,7 @@ section.comments {
           height: 96px;
           min-height: 96px;
           margin: 0;
-          padding: 16px;
+          padding: 8px;
           display: block;
           border: $border;
           border-radius: $border-radius;
@@ -65,23 +71,11 @@ section.comments {
             border-color: darken($border-color, 10%);
           }
         }
-      }
-
-      p.comment-form-author,
-      p.comment-form-email,
-      p.comment-form-url {
-        margin: 32px;
-        padding: 0;
-
-        label {
-          margin-bottom: 8px;
-          display: block;
-        }
 
         input {
           width: 100%;
           margin: 0;
-          padding: 8px 12px;
+          padding: 8px;
           border: $border;
           border-radius: $border-radius;
           background: #F5F5F5;
@@ -100,8 +94,6 @@ section.comments {
         margin: 0 32px - $border-width;
         padding: 0;
         float: right;
-        position: relative;
-        top: -16px;
 
         input.submit {
           display: block;
@@ -129,6 +121,10 @@ section.comments {
     margin: 32px 0;
     padding: 0;
     list-style: none;
+
+    & > li.comment:first-child:before {
+      display: none;
+    }
   }
 
   li.comment {

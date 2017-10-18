@@ -60,7 +60,6 @@ class AstrobotanyCommentWalker extends Walker_Comment {
 ?>
 
 <section class="comments">
-  <?php comment_form(); ?>
   <?php if (have_comments()): ?>
     <?php wp_list_comments([
       'walker'    => new AstrobotanyCommentWalker,
@@ -69,4 +68,5 @@ class AstrobotanyCommentWalker extends Walker_Comment {
   <?php else: ?>
     <h2>no comments</h2>
   <?php endif; ?>
+  <?php comment_form(); ?>
 </section>

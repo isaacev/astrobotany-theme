@@ -65,13 +65,12 @@ class AstrobotanyCommentWalker extends Walker_Comment {
 ?>
 
 <section class="comments">
+  <h2 class="comment-header"><?php comments_number('no comments yet', '1 comment', '% comments'); ?></h2>
   <?php if (have_comments()): ?>
     <?php wp_list_comments([
       'walker'    => new AstrobotanyCommentWalker,
       'max_depth' => 5,
     ]); ?>
-  <?php else: ?>
-    <h2>no comments</h2>
   <?php endif; ?>
   <?php comment_form(); ?>
 </section>

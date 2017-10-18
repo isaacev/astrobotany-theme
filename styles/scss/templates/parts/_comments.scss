@@ -8,6 +8,16 @@ section.comments {
   max-width: 600px;
   margin: 0 auto;
 
+  h2.comment-header {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    & + div.comment-respond {
+      margin-top: 16px;
+    }
+  }
+
   div.comment-respond {
     border: $border;
     border-radius: $border-radius;

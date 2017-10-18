@@ -119,6 +119,12 @@ function astrobotany_comments_open () {
 
 add_filter('comments_open', 'astrobotany_comments_open', 10, 2);
 
+function astrobotany_qlik_shortcode ($atts) {
+  return '<iframe style="width:100%;min-height:600px;border:1px solid gray" src="' . $atts['url'] . '"></iframe>';
+}
+
+add_shortcode('qlik', 'astrobotany_qlik_shortcode');
+
 function my_comments_open( $open, $post_id ) {
 
   $post = get_post( $post_id );

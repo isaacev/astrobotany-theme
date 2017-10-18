@@ -29,7 +29,12 @@ class AstrobotanyCommentWalker extends Walker_Comment {
               <a href="#comment-<?php echo $parent; ?>">Parent</a>
             <?php endif; ?>
           </p>
-          <div class="comment-content copy"><?php echo esc_html(get_comment_text()); ?></div>
+          <div class="comment-content copy"><?php echo wp_kses(get_comment_text(), [
+            'a'      => [ 'href' => [] ],
+            'br'     => [],
+            'em'     => [],
+            'strong' => [],
+          ]); ?></div>
         </article>
         <?php if (($total_replies > 0) and ($depth < $args['max_depth'])): ?>
           <input type="checkbox" checked id="reply-toggle-<?php comment_ID(); ?>" class="reply-toggle">

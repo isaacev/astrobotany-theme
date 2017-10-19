@@ -34,7 +34,7 @@ input[type="checkbox"].qlik-fullscreen:checked + label {
   left: 0;
 
   &:before {
-    content: "Click to exit dashboard full screen";
+    content: "Click to minimize dashboard";
     padding: 0 16px 0 0;
   }
 

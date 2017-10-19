@@ -716,7 +716,7 @@ input[type="checkbox"].qlik-fullscreen:checked + label {
   top: 0;
   left: 0; }
   input[type="checkbox"].qlik-fullscreen:checked + label:before {
-    content: "Click to exit dashboard full screen";
+    content: "Click to minimize dashboard";
     padding: 0 16px 0 0; }
   input[type="checkbox"].qlik-fullscreen:checked + label + iframe.qlik-dashboard {
     width: 100vw;

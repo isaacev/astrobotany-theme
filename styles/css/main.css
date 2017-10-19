@@ -689,6 +689,48 @@ section.comments {
     section.comments li.comment ol.comment-children li.comment:first-child:before {
       height: 32px; }
 
+iframe.qlik-dashboard {
+  width: 100%;
+  min-height: 600px;
+  border: 1px solid gray; }
+
+input[type="checkbox"].qlik-fullscreen {
+  display: none; }
+  input[type="checkbox"].qlik-fullscreen + label {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    cursor: pointer;
+    color: gray; }
+    input[type="checkbox"].qlik-fullscreen + label:before {
+      content: "Click to expand dashboard to full screen";
+      padding: 16px 0; }
+    input[type="checkbox"].qlik-fullscreen + label:hover {
+      color: black; }
+
+input[type="checkbox"].qlik-fullscreen:checked + label {
+  width: 100vw;
+  height: 32px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  input[type="checkbox"].qlik-fullscreen:checked + label:before {
+    content: "Click to exit dashboard full screen";
+    padding: 0 16px 0 0; }
+  input[type="checkbox"].qlik-fullscreen:checked + label + iframe.qlik-dashboard {
+    width: 100vw;
+    height: calc(100vh - 32px);
+    position: fixed;
+    top: 32px;
+    left: 0; }
+
+body.admin-bar input[type="checkbox"].qlik-fullscreen:checked + label {
+  top: 32px; }
+  body.admin-bar input[type="checkbox"].qlik-fullscreen:checked + label + iframe.qlik-dashboard {
+    height: calc(100vh - (32px * 2));
+    top: 64px; }
+
 @media screen and (min-width: 737px) {
   header#primary nav {
     padding: 16px 0; }

@@ -1,0 +1,57 @@
+iframe.qlik-dashboard {
+  width: 100%;
+  min-height: 600px;
+  border: 1px solid gray;
+}
+
+input[type="checkbox"].qlik-fullscreen {
+  display: none;
+
+  & + label {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    cursor: pointer;
+    color: gray;
+
+    &:before {
+      content: "Click to expand dashboard to full screen";
+      padding: 16px 0;
+    }
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+input[type="checkbox"].qlik-fullscreen:checked + label {
+  width: 100vw;
+  height: 32px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &:before {
+    content: "Click to exit dashboard full screen";
+    padding: 0 16px 0 0;
+  }
+
+  & + iframe.qlik-dashboard {
+    width: 100vw;
+    height: calc(100vh - 32px);
+    position: fixed;
+    top: 32px;
+    left: 0;
+  }
+}
+
+body.admin-bar input[type="checkbox"].qlik-fullscreen:checked + label {
+  top: 32px;
+
+  & + iframe.qlik-dashboard {
+    height: calc(100vh - (32px * 2));
+    top: 32px * 2;
+  }
+}

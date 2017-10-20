@@ -1,3 +1,4 @@
+@import '../vars/colors';
 @import '../vars/fonts';
 
 div.copy,
@@ -18,6 +19,15 @@ article.copy {
     margin: 0 0 16px;
   }
 
+  h1, h2 {
+    a:link,
+    a:visited,
+    a:active,
+    a:hover {
+      color: $color-copy;
+    }
+  }
+
   p {
     margin: 0 0 16px;
     font-size: $font-size-copy;
@@ -27,6 +37,18 @@ article.copy {
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  a:link,
+  a:visited,
+  a:active {
+    color: $color-link;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $color-link;
+    text-decoration: underline;
   }
 
   img,

@@ -5,7 +5,8 @@ body {
   margin: 0;
   font-size: 16px;
   font-family: "Lato", sans-serif;
-  background-color: white; }
+  background-color: white;
+  color: #222222; }
 
 @keyframes clockwise {
   0% {
@@ -272,6 +273,22 @@ article.copy {
     font-size: 1.5rem;
     font-family: "Lato", sans-serif;
     margin: 0 0 16px; }
+  div.copy h1 a:link,
+  div.copy h1 a:visited,
+  div.copy h1 a:active,
+  div.copy h1 a:hover, div.copy h2 a:link,
+  div.copy h2 a:visited,
+  div.copy h2 a:active,
+  div.copy h2 a:hover,
+  article.copy h1 a:link,
+  article.copy h1 a:visited,
+  article.copy h1 a:active,
+  article.copy h1 a:hover,
+  article.copy h2 a:link,
+  article.copy h2 a:visited,
+  article.copy h2 a:active,
+  article.copy h2 a:hover {
+    color: #222222; }
   div.copy p,
   article.copy p {
     margin: 0 0 16px;
@@ -281,6 +298,18 @@ article.copy {
     div.copy p:last-child,
     article.copy p:last-child {
       margin-bottom: 0; }
+  div.copy a:link,
+  div.copy a:visited,
+  div.copy a:active,
+  article.copy a:link,
+  article.copy a:visited,
+  article.copy a:active {
+    color: #2455c3;
+    text-decoration: none; }
+  div.copy a:hover,
+  article.copy a:hover {
+    color: #2455c3;
+    text-decoration: underline; }
   div.copy img,
   div.copy > img,
   div.copy p img,

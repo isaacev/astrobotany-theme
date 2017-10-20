@@ -2,6 +2,10 @@ $color-dark-gray   : darken(white, 50%);
 $color-gray        : darken(white, 25%);
 $color-light-gray  : darken(white, 15%);
 $color-dim-white   : darken(white, 5%);
+$color-light-black : #222222;
+$color-mild-blue   : #2455c3;
 
 $color-strong-line : $color-light-gray;
 $color-weak-line   : $color-dim-white;
+$color-copy        : $color-light-black;
+$color-link        : $color-mild-blue;

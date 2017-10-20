@@ -10,6 +10,11 @@ article.post {
     text-align: right;
     flex-grow: 0;
 
+    p {
+      line-height: initial;
+      font-size: 14px;
+    }
+
     p.tags {
       text-align: right;
       word-wrap: break-word;

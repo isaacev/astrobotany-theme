@@ -784,6 +784,9 @@ body.admin-bar input[type="checkbox"].qlik-fullscreen:checked + label {
       min-width: 128px;
       text-align: right;
       flex-grow: 0; }
+      article.post aside p {
+        line-height: initial;
+        font-size: 14px; }
       article.post aside p.tags {
         text-align: right;
         word-wrap: break-word; }

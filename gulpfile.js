@@ -47,7 +47,7 @@ gulp.task('zip', () => {
     '**/*.css',
     '**/*.php',
     './style.css',
-    './screenshot.png',
+    '**/*.{jpg,png}',
   ]
 
   const exclude = [

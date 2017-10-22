@@ -51,7 +51,8 @@ gulp.task('zip', () => {
   ]
 
   const exclude = [
-    'node_modules/**/*'
+    'node_modules/**/*',
+    'releases/**/*',
   ]
 
   gulp.src(include.concat(exclude.map(p => '!' + p)))

@@ -12,6 +12,11 @@ body {
   color: $color-copy;
 }
 
+iframe[src*="youtube.com"] {
+	display: block;
+	margin: 0 auto;
+}
+
 @import 'sections/index';
 @import 'templates/index';
 @import 'templates/parts/index';

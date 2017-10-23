@@ -10,6 +10,7 @@ function astrobotany_setup () {
   register_nav_menu($loc, $desc);
 
   add_theme_support('html5');
+  add_theme_support('woocommerce');
 }
 
 add_action('after_setup_theme', 'astrobotany_setup');

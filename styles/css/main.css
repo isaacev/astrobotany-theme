@@ -793,6 +793,8 @@ body.admin-bar input[type="checkbox"].qlik-fullscreen:checked + label {
         article.post aside p.tags a.tag {
           margin: 2px 0;
           display: inline-block; }
+  div.product {
+    margin: 32px; }
   header.page-header {
     padding: 32px 32px; } }
 
@@ -873,6 +875,8 @@ body.admin-bar input[type="checkbox"].qlik-fullscreen:checked + label {
         article.post aside p.tags a.tag {
           margin: 2px 0;
           display: inline-block; }
+  div.product {
+    margin: 32px 16px; }
   header.page-header {
     padding: 32px 16px; }
   nav.pagination {

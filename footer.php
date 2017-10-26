@@ -40,6 +40,11 @@
                 'inner'  => '<div class="social-link site-instagram"></div><span>Instagram</span>',
                 'after'  => '</li>',
               ]); ?>
+              <?php print_social_link('youtube', [
+                'before' => '<li>',
+                'inner'  => '<div class="social-link site-youtube"></div><span>YouTube</span>',
+                'after'  => '</li>',
+              ]); ?>
             </ul>
           </div>
         <?php endif; ?>

@@ -92,6 +92,10 @@ footer#primary {
         background-image: $icon-instagram-black;
       }
 
+      &:hover div.social-link.site-youtube {
+        background-image: $icon-youtube-black;
+      }
+
       div.social-link {
         width: 24px;
         height: 32px;
@@ -114,6 +118,10 @@ footer#primary {
 
         &.site-instagram {
           background-image: $icon-instagram-gray;
+        }
+
+        &.site-youtube {
+          background-image: $icon-youtube-gray;
         }
       }
 

@@ -57,6 +57,15 @@ function astrobotany_customize ($wp_customize) {
     'label'   => 'Instagram URL',
   ]);
 
+  $wp_customize->add_setting('astrobotany_social[youtube]', [
+    'sanitize_callback' => 'esc_url_raw',
+  ]);
+
+  $wp_customize->add_control('astrobotany_social[youtube]', [
+    'section' => 'astrobotany_social',
+    'label'   => 'YouTube URL',
+  ]);
+
   $wp_customize->add_section('astrobotany_post', [
     'title'    => 'Posts',
     'priority' => 201,

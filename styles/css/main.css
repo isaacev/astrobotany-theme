@@ -419,6 +419,10 @@ footer#primary {
       color: black; }
     footer#primary nav p#copyright {
       margin: 16px 0; }
+    footer#primary nav img#crest {
+      width: 100%;
+      max-width: 64px;
+      display: block; }
     footer#primary nav ul {
       margin: 16px 0;
       padding: 0;

@@ -139,6 +139,23 @@ function astrobotany_qlik_shortcode ($atts) {
 
 add_shortcode('qlik', 'astrobotany_qlik_shortcode');
 
+function get_code_from_youtube_url ($url = '') {
+  parse_str(parse_url($url, PHP_URL_QUERY), $parsed);
+  return $parsed['v'];
+}
+
+function astrobotany_embed_youtube ($atts) {
+  $code = get_code_from_youtube_url($atts['url']);
+
+  if ($code === null) {
+    return '<!-- malformed youtube URL -->';
+  }
+
+  return '<div class="embed-container"><iframe src="https://www.youtube.com/embed/' . $code . '" frameborder="0" allowfullscreen></iframe></div>';
+}
+
+add_shortcode('youtube', 'astrobotany_embed_youtube');
+
 function my_comments_open( $open, $post_id ) {
 
   $post = get_post( $post_id );

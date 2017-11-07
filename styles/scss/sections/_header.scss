@@ -106,16 +106,16 @@ header#primary {
     $dm : 16px;
     $bg : (
       'sun'     : bg(#FEC163, #DE4313),
-      'mercury' : url('../../assets/mercury.png'),
-      'venus'   : url('../../assets/venus.png'),
-      'earth'   : url('../../assets/earth.png'),
-      'moon'    : url('../../assets/moon.png'),
-      'mars'    : url('../../assets/mars.png'),
+      'mercury' : url('../../assets/small-mercury.png'),
+      'venus'   : url('../../assets/small-venus.png'),
+      'earth'   : url('../../assets/small-earth.png'),
+      'moon'    : url('../../assets/small-moon.png'),
+      'mars'    : url('../../assets/small-mars.png'),
     );
 
     @media screen and (max-width: 600px) {
-      $earth : 'earth', 0.0,       0.0,       4.0 * $dm, map-get($bg, 'earth');
-      $moon  : 'moon',  0.5 * $au, 0.3 * $yr, 1.5 * $dm, map-get($bg, 'moon');
+      $earth : 'earth', 0.0,       0.0,       4.0 * $dm, url('../../assets/earth.png');
+      $moon  : 'moon',  0.5 * $au, 0.3 * $yr, 1.5 * $dm, url('../../assets/moon.png');
 
       @include solar-system('local', 200px, ($earth, $moon));
     }

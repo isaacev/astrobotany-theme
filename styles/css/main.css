@@ -263,7 +263,7 @@ header#primary {
             animation-duration: 10s;
             animation-name: counter-clockwise; }
             body.is-front-page header#primary .solar-system .orbit .body#mercury:after {
-              background: url("../../assets/mercury.png");
+              background: url("../../assets/small-mercury.png");
               background-repeat: no-repeat;
               background-position: center;
               background-size: cover;
@@ -281,7 +281,7 @@ header#primary {
             animation-duration: 50s;
             animation-name: counter-clockwise; }
             body.is-front-page header#primary .solar-system .orbit .body#earth:after {
-              background: url("../../assets/earth.png");
+              background: url("../../assets/small-earth.png");
               background-repeat: no-repeat;
               background-position: center;
               background-size: cover;
@@ -299,7 +299,7 @@ header#primary {
             animation-duration: 30s;
             animation-name: counter-clockwise; }
             body.is-front-page header#primary .solar-system .orbit .body#venus:after {
-              background: url("../../assets/venus.png");
+              background: url("../../assets/small-venus.png");
               background-repeat: no-repeat;
               background-position: center;
               background-size: cover;
@@ -317,7 +317,7 @@ header#primary {
             animation-duration: 5s;
             animation-name: counter-clockwise; }
             body.is-front-page header#primary .solar-system .orbit .body#moon:after {
-              background: url("../../assets/moon.png");
+              background: url("../../assets/small-moon.png");
               background-repeat: no-repeat;
               background-position: center;
               background-size: cover;
@@ -335,7 +335,7 @@ header#primary {
             animation-duration: 100s;
             animation-name: counter-clockwise; }
             body.is-front-page header#primary .solar-system .orbit .body#mars:after {
-              background: url("../../assets/mars.png");
+              background: url("../../assets/small-mars.png");
               background-repeat: no-repeat;
               background-position: center;
               background-size: cover;

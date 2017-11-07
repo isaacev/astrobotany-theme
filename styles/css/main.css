@@ -135,10 +135,10 @@ header#primary {
           top: 100px;
           left: 100px; }
         body.is-front-page header#primary .solar-system .orbit#moon {
-          width: 150px;
-          height: 150px;
-          top: -75px;
-          left: -75px; }
+          width: 200px;
+          height: 200px;
+          top: -100px;
+          left: -100px; }
         body.is-front-page header#primary .solar-system .orbit .body {
           width: 100%;
           height: 0;
@@ -155,25 +155,41 @@ header#primary {
             top: 0;
             animation: none; }
             body.is-front-page header#primary .solar-system .orbit .body#earth:after {
-              background: linear-gradient(135deg, #5EFCE8 0%, #736EFE 100%);
-              width: 40px;
-              height: 40px;
-              top: -20px;
-              left: -20px; }
+              background: url("../../assets/earth.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              border-radius: 50%;
+              width: 64px;
+              height: 64px;
+              top: -32px;
+              left: -32px;
+              animation-name: counter-clockwise;
+              animation-duration: 20s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite; }
           body.is-front-page header#primary .solar-system .orbit .body#moon {
-            top: 75px;
+            top: 100px;
             animation-duration: 15s;
             animation-name: counter-clockwise; }
             body.is-front-page header#primary .solar-system .orbit .body#moon:after {
-              background: linear-gradient(135deg, #ECF0F1 0%, #95A5A6 100%);
-              width: 15px;
-              height: 15px;
-              top: -7.5px;
-              left: -7.5px; } }
+              background: url("../../assets/moon.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              border-radius: 50%;
+              width: 24px;
+              height: 24px;
+              top: -12px;
+              left: -12px;
+              animation-name: counter-clockwise;
+              animation-duration: 20s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite; } }
   @media screen and (min-width: 300px) and (min-width: 601px) {
     body.is-front-page header#primary .solar-system {
-      width: 400px;
-      height: 400px;
+      width: 540px;
+      height: 540px;
       position: relative;
       display: none; }
       body.is-front-page header#primary .solar-system#whole {
@@ -186,28 +202,33 @@ header#primary {
         body.is-front-page header#primary .solar-system .orbit#sun {
           width: 0;
           height: 0;
-          top: 200px;
-          left: 200px; }
+          top: 270px;
+          left: 270px; }
         body.is-front-page header#primary .solar-system .orbit#mercury {
-          width: 120px;
-          height: 120px;
-          top: -60px;
-          left: -60px; }
+          width: 160px;
+          height: 160px;
+          top: -80px;
+          left: -80px; }
         body.is-front-page header#primary .solar-system .orbit#earth {
-          width: 300px;
-          height: 300px;
-          top: -150px;
-          left: -150px; }
+          width: 400px;
+          height: 400px;
+          top: -200px;
+          left: -200px; }
         body.is-front-page header#primary .solar-system .orbit#venus {
-          width: 210px;
-          height: 210px;
-          top: -105px;
-          left: -105px; }
+          width: 280px;
+          height: 280px;
+          top: -140px;
+          left: -140px; }
         body.is-front-page header#primary .solar-system .orbit#moon {
-          width: 30px;
-          height: 30px;
-          top: -15px;
-          left: -15px; }
+          width: 40px;
+          height: 40px;
+          top: -20px;
+          left: -20px; }
+        body.is-front-page header#primary .solar-system .orbit#mars {
+          width: 520px;
+          height: 520px;
+          top: -260px;
+          left: -260px; }
         body.is-front-page header#primary .solar-system .orbit .body {
           width: 100%;
           height: 0;
@@ -225,50 +246,108 @@ header#primary {
             animation: none; }
             body.is-front-page header#primary .solar-system .orbit .body#sun:after {
               background: linear-gradient(135deg, #FEC163 0%, #DE4313 100%);
-              width: 40px;
-              height: 40px;
-              top: -20px;
-              left: -20px; }
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              border-radius: 50%;
+              width: 64px;
+              height: 64px;
+              top: -32px;
+              left: -32px;
+              animation-name: counter-clockwise;
+              animation-duration: 20s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite; }
           body.is-front-page header#primary .solar-system .orbit .body#mercury {
-            top: 60px;
+            top: 80px;
             animation-duration: 10s;
             animation-name: counter-clockwise; }
             body.is-front-page header#primary .solar-system .orbit .body#mercury:after {
-              background: linear-gradient(135deg, #ECF0F1 0%, #95A5A6 100%);
-              width: 6px;
-              height: 6px;
-              top: -3px;
-              left: -3px; }
-          body.is-front-page header#primary .solar-system .orbit .body#earth {
-            top: 150px;
-            animation-duration: 50s;
-            animation-name: counter-clockwise; }
-            body.is-front-page header#primary .solar-system .orbit .body#earth:after {
-              background: linear-gradient(135deg, #5EFCE8 0%, #736EFE 100%);
+              background: url("../../assets/mercury.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              border-radius: 50%;
               width: 10px;
               height: 10px;
               top: -5px;
-              left: -5px; }
+              left: -5px;
+              animation-name: counter-clockwise;
+              animation-duration: 20s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite; }
+          body.is-front-page header#primary .solar-system .orbit .body#earth {
+            top: 200px;
+            animation-duration: 50s;
+            animation-name: counter-clockwise; }
+            body.is-front-page header#primary .solar-system .orbit .body#earth:after {
+              background: url("../../assets/earth.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              border-radius: 50%;
+              width: 16px;
+              height: 16px;
+              top: -8px;
+              left: -8px;
+              animation-name: counter-clockwise;
+              animation-duration: 20s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite; }
           body.is-front-page header#primary .solar-system .orbit .body#venus {
-            top: 105px;
+            top: 140px;
             animation-duration: 30s;
             animation-name: counter-clockwise; }
             body.is-front-page header#primary .solar-system .orbit .body#venus:after {
-              background: linear-gradient(135deg, #FAD7A1 0%, #E96D71 100%);
-              width: 9px;
-              height: 9px;
-              top: -4.5px;
-              left: -4.5px; }
+              background: url("../../assets/venus.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              border-radius: 50%;
+              width: 14px;
+              height: 14px;
+              top: -7px;
+              left: -7px;
+              animation-name: counter-clockwise;
+              animation-duration: 20s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite; }
           body.is-front-page header#primary .solar-system .orbit .body#moon {
-            top: 15px;
+            top: 20px;
             animation-duration: 5s;
             animation-name: counter-clockwise; }
             body.is-front-page header#primary .solar-system .orbit .body#moon:after {
-              background: linear-gradient(135deg, #ECF0F1 0%, #95A5A6 100%);
-              width: 3px;
-              height: 3px;
-              top: -1.5px;
-              left: -1.5px; } }
+              background: url("../../assets/moon.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              border-radius: 50%;
+              width: 6px;
+              height: 6px;
+              top: -3px;
+              left: -3px;
+              animation-name: counter-clockwise;
+              animation-duration: 20s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite; }
+          body.is-front-page header#primary .solar-system .orbit .body#mars {
+            top: 260px;
+            animation-duration: 100s;
+            animation-name: counter-clockwise; }
+            body.is-front-page header#primary .solar-system .orbit .body#mars:after {
+              background: url("../../assets/mars.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              border-radius: 50%;
+              width: 13px;
+              height: 13px;
+              top: -6.5px;
+              left: -6.5px;
+              animation-name: counter-clockwise;
+              animation-duration: 20s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite; } }
 
 main {
   width: 100%;

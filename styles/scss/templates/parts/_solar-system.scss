@@ -7,15 +7,23 @@
   height: $size;
 }
 
-@mixin planet ($size, $speed, $diam, $color) {
+@mixin planet ($size, $speed, $diam, $bg) {
   top: $size / 2;
 
   &:after {
-    background: $color;
+    background: $bg;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
     width: $diam;
     height: $diam;
     top: (-$diam / 2);
     left: (-$diam / 2);
+    animation-name: counter-clockwise;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
   @if $speed == 0 {
@@ -84,13 +92,13 @@
         @for $i from 1 through length($bodies) {
           $body  : nth($bodies, $i);
           $name  : nth($body, 1);
-          $orbit : nth($body, 2);
-          $speed : nth($body, 3);
-          $diam  : nth($body, 4);
-          $color : nth($body, 5);
+          $orbit : round(nth($body, 2));
+          $speed : round(nth($body, 3));
+          $diam  : round(nth($body, 4));
+          $bg    : nth($body, 5);
 
           &##{$name} {
-            @include planet($orbit, $speed, $diam, $color);
+            @include planet($orbit, $speed, $diam, $bg);
           }
         }
       }

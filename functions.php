@@ -166,6 +166,14 @@ function my_comments_open( $open, $post_id ) {
   return $open;
 }
 
+function astrobotany_except_more ($more) {
+  return sprintf('&hellip; <a class="read-more" href="href="%1$s"><em>%2$s</em></a>',
+    get_permalink(get_the_ID()),
+    'Read More');
+}
+
+add_filter('excerpt_more', 'astrobotany_except_more');
+
 function page_header ($args) {
   echo '<header class="page-header">';
   echo '<h1>';

@@ -23,6 +23,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <article class="copy">
     <?php if (is_single()): ?>
+      <?php if (has_post_thumbnail( $post->ID ) ): ?>
+        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+        <img src="<?php echo $image[0]; ?>" />
+      <?php endif; ?>
       <?php the_content(); ?>
     <?php else: ?>
       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

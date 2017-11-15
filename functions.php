@@ -167,7 +167,7 @@ function my_comments_open( $open, $post_id ) {
 }
 
 function astrobotany_except_more ($more) {
-  return sprintf('&hellip; <a class="read-more" href="href="%1$s"><em>%2$s</em></a>',
+  return sprintf('&hellip; <a class="read-more" href="%1$s"><em>%2$s</em></a>',
     get_permalink(get_the_ID()),
     'Read More');
 }

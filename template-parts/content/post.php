@@ -36,9 +36,6 @@
   </article>
   <?php if (is_single()): ?>
     <aside>
-      <a href="<?php print_author_profile_url(); ?>">
-        <img class="avatar" src="<?php print_author_profile_picture_url(); ?>">
-      </a>
       <p class="author"><?php print_author_name(); ?></p>
       <p class="date"><?php print_post_date(); ?></p>
       <?php if (is_single()): ?>

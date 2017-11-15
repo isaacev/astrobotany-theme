@@ -584,6 +584,12 @@ article.post {
     margin: 8px 0 0 0; }
   article.post aside p.author {
     font-weight: bold; }
+  article.post.featured-post a.featured-image {
+    display: block;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
 
 section.author {
   margin: 0;

@@ -25,13 +25,11 @@ article.post {
     }
   }
 
-  &.featured-post {
-    a.featured-image {
-      display: block;
-      height: 320px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-    }
+  a.featured-image {
+    display: block;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 }

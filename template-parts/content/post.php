@@ -30,19 +30,22 @@
       <?php the_content(); ?>
     <?php else: ?>
       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      <p><?php print_author_name(); ?> &mdash; <em><?php print_post_date(); ?></em></p>
       <?php the_excerpt(); ?>
     <?php endif; ?>
   </article>
-  <aside>
-    <a href="<?php print_author_profile_url(); ?>">
-      <img class="avatar" src="<?php print_author_profile_picture_url(); ?>">
-    </a>
-    <p class="author"><?php print_author_name(); ?></p>
-    <p class="date"><?php print_post_date(); ?></p>
-    <?php if (is_single()): ?>
-      <?php print_tags(); ?>
-    <?php endif; ?>
-  </aside>
+  <?php if (is_single()): ?>
+    <aside>
+      <a href="<?php print_author_profile_url(); ?>">
+        <img class="avatar" src="<?php print_author_profile_picture_url(); ?>">
+      </a>
+      <p class="author"><?php print_author_name(); ?></p>
+      <p class="date"><?php print_post_date(); ?></p>
+      <?php if (is_single()): ?>
+        <?php print_tags(); ?>
+      <?php endif; ?>
+    </aside>
+  <?php endif; ?>
 </article>
 
 <?php if (is_single()): ?>

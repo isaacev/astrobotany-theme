@@ -12,6 +12,12 @@ body {
   color: $color-copy;
 }
 
+iframe {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 iframe[src*="soundcloud.com"] {
   margin: 32px auto;
   display: block;

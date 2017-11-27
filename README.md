@@ -39,6 +39,12 @@ After the theme has been modified it can be uploaded to a WordPress installation
 - `**/*.php`
 - `./style.css`
 - `./screenshot.png`
+- `**/*.{jpg,png,svg}`
+
+While excluding any files in the folders:
+
+- `./node_modules`
+- `./releases`
 
 If some file not matching these patterns should be included in future versions of the archive, add the appropriate file pattern to the list of patterns in `gulpfile.js`.
 

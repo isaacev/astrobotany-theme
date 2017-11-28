@@ -20,5 +20,4 @@
       <p><?php print_author_name(); ?> &mdash; <em><?php print_post_date(); ?></em></p>
     </article>
   </article>
-  <hr>
 <?php endif; ?>

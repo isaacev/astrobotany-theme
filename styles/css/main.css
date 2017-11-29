@@ -616,7 +616,7 @@ section.author {
     float: right;
     margin-top: 32px; }
     aside#sidebar div#links {
-      margin: 0;
+      margin: 0 0 32px 0;
       padding: 16px;
       background-color: #f2f2f2; }
       aside#sidebar div#links h2 {

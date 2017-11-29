@@ -5,6 +5,10 @@ function astrobotany_setup () {
   $desc = 'Navigation menu in header of each page';
   register_nav_menu($loc, $desc);
 
+  $loc  = 'sidebar';
+  $desc = 'Sidebar menu present in the news feed';
+  register_nav_menu($loc, $desc);
+
   $loc  = 'footer';
   $desc = 'Supplementary links in the footer of each page';
   register_nav_menu($loc, $desc);

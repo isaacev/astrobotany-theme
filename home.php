@@ -5,6 +5,8 @@ page_header([
   'header'=> get_the_title(get_option('page_for_posts', true)),
 ]);
 
+echo '<section id="posts">';
+
 $is_first_sticky_post = true;
 
 if (have_posts()) {
@@ -20,4 +22,6 @@ if (have_posts()) {
   get_template_part('template-parts/part/pagination');
 }
 
+echo '</section>';
+get_template_part('template-parts/part/sidebar');
 get_footer();

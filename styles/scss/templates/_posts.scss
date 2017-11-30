@@ -51,6 +51,17 @@
       li {
         line-height: 1.6rem;
       }
+
+      a:link,
+      a:visited,
+      a:active {
+        color: $color-light-black;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: black;
+      }
     }
 
     div#ad {

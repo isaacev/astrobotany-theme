@@ -1,9 +1,14 @@
 <?php
 
 get_header();
-page_header([
-  'header'=> get_the_title(get_option('page_for_posts', true)),
-]);
+
+if (has_post_thumbnail()) {
+  get_template_part('template-parts/part/banner');
+} else {
+  page_header([
+    'header' => get_the_title(),
+  ]);
+}
 
 echo '<section id="posts">';
 

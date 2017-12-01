@@ -18,7 +18,7 @@
         </a>
       <?php endif; ?>
       <h3><em>Featured:</em></h3>
-      <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <?php echo $post->ID; ?></h1>
+      <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
       <p><?php print_author_name(); ?> &mdash; <em><?php print_post_date(); ?></em></p>
     </article>
   </article>

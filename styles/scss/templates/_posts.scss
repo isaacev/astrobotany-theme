@@ -10,6 +10,13 @@
   }
 }
 
+aside#sidebar {
+  div#links {
+    padding: 16px;
+    background-color: $color-dim-white;
+  }
+}
+
 @media screen and (min-width: 1080px) {
   #banner-image {
     background-size: cover;
@@ -43,8 +50,6 @@
 
     div#links {
       margin: 0 0 32px 0;
-      padding: 16px;
-      background-color: $color-dim-white;
 
       h2 {
         margin: 16px 0 8px 0;

@@ -102,6 +102,10 @@ footer#primary {
         background-image: $icon-youtube-black;
       }
 
+      &:hover div.social-link.site-reddit {
+        background-image: $icon-reddit-black;
+      }
+
       div.social-link {
         width: 24px;
         height: 32px;
@@ -128,6 +132,10 @@ footer#primary {
 
         &.site-youtube {
           background-image: $icon-youtube-gray;
+        }
+
+        &.site-reddit {
+          background-image: $icon-reddit-gray;
         }
       }
 

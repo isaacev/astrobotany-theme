@@ -96,39 +96,5 @@ header#primary {
     label[for="show-mobile-menu"]:hover:after {
       color: white;
     }
-
-    .solar-system {
-      margin: 32px auto;
-    }
-
-    $au : 400px;
-    $yr : 50s;
-    $dm : 16px;
-    $bg : (
-      'sun'     : bg(#FEC163, #DE4313),
-      'mercury' : url('../../assets/small-mercury.png'),
-      'venus'   : url('../../assets/small-venus.png'),
-      'earth'   : url('../../assets/small-earth.png'),
-      'moon'    : url('../../assets/small-moon.png'),
-      'mars'    : url('../../assets/small-mars.png'),
-    );
-
-    @media screen and (max-width: 600px) {
-      $earth : 'earth', 0.0,       0.0,       4.0 * $dm, url('../../assets/earth.png');
-      $moon  : 'moon',  0.5 * $au, 0.3 * $yr, 1.5 * $dm, url('../../assets/moon.png');
-
-      @include solar-system('local', 200px, ($earth, $moon));
-    }
-
-    @media screen and (min-width: 601px) {
-      $sun     : 'sun',     0.0,       0.0,       4.0 * $dm, map-get($bg, 'sun');
-      $mercury : 'mercury', 0.4 * $au, 0.2 * $yr, 0.6 * $dm, map-get($bg, 'mercury');
-      $venus   : 'venus',   0.7 * $au, 0.6 * $yr, 0.9 * $dm, map-get($bg, 'venus');
-      $earth   : 'earth',   1.0 * $au, 1.0 * $yr, 1.0 * $dm, map-get($bg, 'earth');
-      $moon    : 'moon',    0.1 * $au, 0.1 * $yr, 0.4 * $dm, map-get($bg, 'moon');
-      $mars    : 'mars',    1.3 * $au, 2.0 * $yr, 0.8 * $dm, map-get($bg, 'mars');
-
-      @include solar-system('whole', 540px, ($sun, $mercury, $earth, $venus, $moon, $mars));
-    }
   }
 }

@@ -3,7 +3,7 @@
       <nav>
         <div class="panel">
           <h2><a href="<?php echo get_site_url(); ?>"><?php bloginfo('name'); ?></a></h2>
-          <p id="copyright">&copy; 2017</p>
+          <p id="copyright">&copy; <?php echo date('Y'); ?></p>
           <a href="http://dnestudios.com"><img id="associated" src="<?php echo get_template_directory_uri(); ?>/assets/dne.png"></a>
         </div>
         <?php if (has_nav_menu('footer')): ?>

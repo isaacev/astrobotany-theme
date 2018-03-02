@@ -20,6 +20,16 @@ function astrobotany_setup () {
 add_action('after_setup_theme', 'astrobotany_setup');
 
 function astrobotany_customize ($wp_customize) {
+  $wp_customize->add_setting('show_solar_system', [
+    'default' => true,
+  ]);
+
+  $wp_customize->add_control('show_solar_system', [
+    'section' => 'static_front_page',
+    'label'   => 'Show Solar System',
+    'type'    => 'checkbox',
+  ]);
+
   $wp_customize->add_section('astrobotany_social', [
     'title'    => 'Social Links',
     'priority' => 200,

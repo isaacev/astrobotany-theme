@@ -1,3 +1,4 @@
+<?php if (get_theme_mod('show_solar_system', true)): ?>
 <style>
 @keyframes clockwise {
   0% {
@@ -271,3 +272,4 @@
     </div>
   </div>
 </div>
+<?php endif; ?>

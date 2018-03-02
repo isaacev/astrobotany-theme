@@ -54,8 +54,9 @@ header#primary {
   header#primary nav {
     min-height: 32px;
     margin: 0;
-    border-bottom: 2px solid #d9d9d9;
     text-align: right; }
+    header#primary nav.border {
+      border-bottom: 2px solid #d9d9d9; }
     header#primary nav h1 {
       height: 32px;
       margin: 0;

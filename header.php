@@ -8,7 +8,7 @@
   </head>
   <body <?php body_class(is_front_page() ? 'is-front-page' : false); ?>>
     <header id="primary">
-      <nav>
+      <nav class="<?php if (get_theme_mod('show_solar_system', true)) { echo "border"; } ?>">
         <h1><a href="<?php echo get_site_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 
         <input id="show-mobile-menu" type="checkbox">

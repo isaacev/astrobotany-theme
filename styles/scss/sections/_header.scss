@@ -11,8 +11,11 @@ header#primary {
   nav {
     min-height: 32px;
     margin: 0;
-    border-bottom: 2px solid $color-strong-line;
     text-align: right;
+
+    &.border {
+      border-bottom: 2px solid $color-strong-line;
+    }
 
     h1 {
       height: 32px;

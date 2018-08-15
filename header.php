@@ -11,9 +11,6 @@
       <nav class="<?php if (get_theme_mod('show_solar_system', true)) { echo "border"; } ?>">
         <h1><a href="<?php echo get_site_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 
-        <input id="show-mobile-menu" type="checkbox">
-        <label for="show-mobile-menu"></label>
-
         <?php wp_nav_menu(array(
           'theme_location' => 'primary',
           'menu_id'        => 'menu',
@@ -21,8 +18,5 @@
           'depth'          => 1,
         )); ?>
       </nav>
-      <?php if (is_front_page()): ?>
-        <?php get_template_part('template-parts/part/solar-system'); ?>
-      <?php endif; ?>
     </header>
     <main>

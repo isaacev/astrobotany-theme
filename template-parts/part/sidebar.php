@@ -17,13 +17,4 @@
       ]); ?>
     </ul>
   </div>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- Astrobotany NEWS Ad -->
-  <ins class="adsbygoogle"
-       style="display:inline-block;width:300px;height:250px"
-       data-ad-client="ca-pub-4857359479760947"
-       data-ad-slot="1711020854"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
 </aside>

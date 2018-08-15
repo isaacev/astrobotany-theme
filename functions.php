@@ -112,25 +112,6 @@ function enqueue_styles () {
    * a specific manner. Any changes to this function should be checked
    * to make sure they don't break the 'bump' task.
    */
-
-  $handle = 'font-open-sans';
-  $src    = 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
-  $deps   = array();
-  $ver    = false;
-  wp_enqueue_style($handle, $src, $deps, $ver);
-
-  $handle = 'font-lato';
-  $src    = 'https://fonts.googleapis.com/css?family=Lato:400,400i,700';
-  $deps   = array();
-  $ver    = false;
-  wp_enqueue_style($handle, $src, $deps, $ver);
-
-  $handle = 'font-questrial';
-  $src    = 'https://fonts.googleapis.com/css?family=Questrial';
-  $deps   = array();
-  $ver    = false;
-  wp_enqueue_style($handle, $src, $deps, $ver);
-
   $handle = 'main';
   $src    = get_template_directory_uri() . '/styles/css/main.css';
   $deps   = array('font-open-sans');
@@ -151,16 +132,6 @@ function astrobotany_comments_open () {
 }
 
 add_filter('comments_open', 'astrobotany_comments_open', 10, 2);
-
-function astrobotany_qlik_shortcode ($atts) {
-  $id = 'qlik-dashboard-' . rand();
-  $checkbox = '<input class="qlik-fullscreen" id="' . $id . '" type="checkbox">';
-  $label = '<label for="' . $id . '"></label>';
-  $frame = '<iframe class="qlik-dashboard" src="' . $atts['url'] . '"></iframe>';
-  return $checkbox . $label . $frame;
-}
-
-add_shortcode('qlik', 'astrobotany_qlik_shortcode');
 
 function get_code_from_youtube_url ($url = '') {
   parse_str(parse_url($url, PHP_URL_QUERY), $parsed);

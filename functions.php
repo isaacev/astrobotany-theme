@@ -15,6 +15,7 @@ function astrobotany_setup () {
 
   add_theme_support('html5');
   add_theme_support('woocommerce');
+  add_theme_support('post-thumbnails', ['post']);
 }
 
 add_action('after_setup_theme', 'astrobotany_setup');
@@ -106,6 +107,12 @@ function astrobotany_customize ($wp_customize) {
 add_action('customize_register', 'astrobotany_customize');
 
 function enqueue_styles () {
+  $handle = 'google-fonts';
+  $src    = 'https://fonts.googleapis.com/css?family=Merriweather:400,900|Roboto';
+  $deps   = [];
+  $ver    = '2.0.0';
+  wp_enqueue_style($handle, $src, $deps, $ver);
+
   /**
    * WARNING:
    * The gulp 'bump' task depends on this function to be formatted in
@@ -114,8 +121,8 @@ function enqueue_styles () {
    */
   $handle = 'main';
   $src    = get_template_directory_uri() . '/styles/css/main.css';
-  $deps   = array('font-open-sans');
-  $ver    = '1.0.38';
+  $deps   = array('google-fonts');
+  $ver    = '2.0.0';
   wp_enqueue_style($handle, $src, $deps, $ver);
 }
 

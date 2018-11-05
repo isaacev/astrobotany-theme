@@ -1,0 +1,37 @@
+@import "./colors";
+@import "./typography";
+@import "./utils";
+
+.centered {
+  @include centered();
+}
+
+.row {
+  @include centered();
+  @include grid();
+
+  .narrow {
+    grid-column: 3 / span 8;
+  }
+}
+
+img {
+  border-radius: 3px;
+}
+
+a:link {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #8e44ad;
+  text-decoration: none;
+}

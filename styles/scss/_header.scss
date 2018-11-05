@@ -1,0 +1,148 @@
+@import "./colors";
+@import "./typography";
+@import "./utils";
+
+$layout-header-height: 64px;
+$layout-header-link-height: 32px;
+
+#nav {
+  height: $layout-header-height;
+  display: flex;
+  position: relative;
+  background: $color-header;
+  color: $color-primary;
+  z-index: 100;
+
+  .centered {
+    display: flex;
+  }
+
+  #wordmark {
+    height: $layout-header-height;
+    margin-left: 1rem;
+    display: block;
+    flex-grow: 0;
+    font-weight: 900;
+    font-size: $font-size-larger;
+    line-height: $layout-header-height;
+    font-family: $font-serif;
+  }
+
+  #links {
+    height: $layout-header-height;
+    margin: 0 0 0 1rem;
+    padding: 0;
+    flex-grow: 1;
+    text-align: right;
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+
+    $vert-padding: ($layout-header-height - $layout-header-link-height) / 2;
+    $underline-weight: 4px;
+
+    a:link,
+    a:visited {
+      height: $layout-header-link-height;
+      padding: $vert-padding 1rem;
+      display: inline-block;
+      font-weight: normal;
+      line-height: $layout-header-link-height;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:hover,
+    a:focus {
+      padding-bottom: $vert-padding - $underline-weight;
+      border-bottom: $underline-weight solid $color-primary;
+      outline: none;
+    }
+  }
+}
+
+#figure {
+  @include centered();
+  margin-top: 1rem;
+  margin-bottom: 0;
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+#title {
+  margin-top: 1rem;
+
+  #timestamp {
+    margin: 0;
+    color: gray;
+  }
+
+  #headline {
+    margin: 0.5rem 0 0 0;
+  }
+}
+
+#meta {
+  color: gray;
+
+  .meta-field {
+    margin: 1rem 0 0 0;
+    font-size: $font-size-small;
+  }
+
+  .meta-field + .meta-field {
+    margin-top: 0.5rem;
+  }
+}
+
+header.blowup {
+  position: relative;
+
+  #nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    color: white !important;
+    z-index: 100;
+
+    a {
+      border-bottom-color: white !important;
+    }
+  }
+
+  #figure {
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+
+    img {
+      border-radius: 0;
+    }
+  }
+}
+
+header.overlay {
+  #figure-and-title {
+    position: relative;
+  }
+
+  #timestamp {
+    color: white !important;
+  }
+
+  #title {
+    margin-bottom: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white !important;
+  }
+}

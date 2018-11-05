@@ -1,0 +1,46 @@
+@import "./colors";
+@import "./typography";
+@import "./utils";
+
+article {
+  grid-row-gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  &::first-letter {
+    padding: 11px 8px 0 0;
+    float: left;
+    font: 3rem/2rem $font-serif;
+    color: $color-primary;
+  }
+
+  p {
+    margin: 1.5rem 0 0 0;
+    font-size: $font-size-normal;
+    line-height: $line-height-normal;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  blockquote {
+    margin: 1.5rem 0 0 -24px;
+    padding: 0 0 0 20px;
+    font-size: $font-size-normal;
+    line-height: $line-height-normal;
+    border-left: 4px solid $color-primary;
+
+    &:first-child {
+      margin-top: 0;
+
+      p:first-child {
+        margin-top: 0;
+      }
+    }
+
+    p + p {
+      margin-top: 1rem;
+    }
+  }
+}

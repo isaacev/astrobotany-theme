@@ -1,0 +1,12 @@
+@mixin grid($cols: 12) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-gap: 1rem;
+}
+
+@mixin centered() {
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}

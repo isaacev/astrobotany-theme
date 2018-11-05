@@ -98,7 +98,8 @@ a:visited {
     margin: 0;
     color: gray; }
   #title #headline {
-    margin: 0.5rem 0 0 0; }
+    margin: 0.5rem 0 0 0;
+    font-family: "Merriweather", serif; }
 
 #meta {
   color: gray; }
@@ -143,11 +144,6 @@ article {
   grid-row-gap: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem; }
-  article::first-letter {
-    padding: 11px 8px 0 0;
-    float: left;
-    font: 3rem/2rem "Merriweather", serif;
-    color: #383f4d; }
   article p {
     margin: 1.5rem 0 0 0;
     font-size: 1rem;

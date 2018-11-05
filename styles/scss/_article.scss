@@ -7,13 +7,6 @@ article {
   margin-top: 1rem;
   margin-bottom: 1rem;
 
-  &::first-letter {
-    padding: 11px 8px 0 0;
-    float: left;
-    font: 3rem/2rem $font-serif;
-    color: $color-primary;
-  }
-
   p {
     margin: 1.5rem 0 0 0;
     font-size: $font-size-normal;

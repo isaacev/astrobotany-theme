@@ -349,3 +349,76 @@ function print_social_link ($name, $args = []) {
     }
   }
 }
+
+define('OVERLAY_FORMAT_KEY', 'astrobotany_overlay_format');
+define('HEADER_COLOR_KEY',   'astrobotany_overlay_header_color');
+define('HEADLINE_COLOR_KEY', 'astrobotany_overlay_headline_color');
+
+function astrobotany_feature_customizations_post_html($post) {
+  $overlay_format = get_post_meta($post->ID, OVERLAY_FORMAT_KEY, true);
+  $header_color   = get_post_meta($post->ID, HEADER_COLOR_KEY, true);
+  $headline_color = get_post_meta($post->ID, HEADLINE_COLOR_KEY, true);
+
+  ?>
+  <p class="post-attributes-label-wrapper">
+    <label class="post-attributes-label" for="<?= OVERLAY_FORMAT_KEY; ?>">Overlay</label>
+  </p>
+  <select name="<?= OVERLAY_FORMAT_KEY; ?>" id="<?= OVERLAY_FORMAT_KEY; ?>">
+    <option value="normal"         <?= ($overlay_format === 'normal')         ? 'selected' : ''; ?>>Normal</option>
+	  <option value="normal-overlay" <?= ($overlay_format === 'normal-overlay') ? 'selected' : ''; ?>>Normal with overlay</option>
+    <option value="blowup"         <?= ($overlay_format === 'blowup')         ? 'selected' : ''; ?>>Blowup</option>
+    <option value="blowup-overlay" <?= ($overlay_format === 'blowup-overlay') ? 'selected' : ''; ?>>Blowup with overlay</option>
+  </select>
+
+  <p class="post-attributes-label-wrapper">
+    <label class="post-attributes-label" for="<?= HEADER_COLOR_KEY; ?>">Navigation color</label>
+  </p>
+  <select name="<?= HEADER_COLOR_KEY; ?>" id="<?= HEADER_COLOR_KEY; ?>">
+    <option value="black" <?= ($header_color === 'black') ? 'selected' : ''; ?>>Black</option>
+    <option value="white" <?= ($header_color === 'white') ? 'selected' : ''; ?>>White</option>
+  </select>
+
+  <p class="post-attributes-label-wrapper">
+    <label class="post-attributes-label" for="<?= HEADLINE_COLOR_KEY; ?>">Headline color</label>
+  </p>
+  <select name="<?= HEADLINE_COLOR_KEY; ?>" id="<?= HEADLINE_COLOR_KEY; ?>">
+    <option value="black" <?= ($headline_color === 'black') ? 'selected' : ''; ?>>Black</option>
+	  <option value="white" <?= ($headline_color === 'white') ? 'selected' : ''; ?>>White</option>
+  </select>
+  <?php
+}
+
+function astrobotany_save_post ($post_id) {
+  if (array_key_exists(OVERLAY_FORMAT_KEY, $_POST)) {
+    update_post_meta($post_id, OVERLAY_FORMAT_KEY, $_POST[OVERLAY_FORMAT_KEY]);
+  }
+
+  if (array_key_exists(HEADER_COLOR_KEY, $_POST)) {
+    update_post_meta($post_id, HEADER_COLOR_KEY, $_POST[HEADER_COLOR_KEY]);
+  }
+
+  if (array_key_exists(HEADLINE_COLOR_KEY, $_POST)) {
+    update_post_meta($post_id, HEADLINE_COLOR_KEY, $_POST[HEADLINE_COLOR_KEY]);
+  }
+}
+
+add_action('save_post', 'astrobotany_save_post');
+
+function astrobotany_post_meta_box () {
+  $id       = 'astrobotany-post-feature-config';
+  $title    = 'Featured Image Options';
+  $callback = 'astrobotany_feature_customizations_post_html';
+  $screen   = null;
+  $context  = 'side';
+  add_meta_box($id, $title, $callback, $screen, $context);
+}
+
+add_action('add_meta_boxes', 'astrobotany_post_meta_box');
+
+function one_of($domain, $given) {
+  if (in_array($given, $domain)) {
+    return $given;
+  } else {
+    return $domain[0];
+  }
+}

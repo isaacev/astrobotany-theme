@@ -1,0 +1,27 @@
+@import "./utils";
+@import "./typography";
+
+main {
+  @include centered();
+  @include grid();
+}
+
+main #featured {
+  grid-column: 1 / span 8;
+}
+
+main #latest {
+  grid-column: 9 / span 4;
+
+  h2 {
+    font-weight: 400;
+    font-size: $font-size-larger;
+    font-family: $font-serif;
+    color: gray;
+  }
+
+  ol {
+    margin: 1rem 0 0 0;
+    padding: 0;
+  }
+}

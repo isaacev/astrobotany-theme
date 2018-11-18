@@ -52,6 +52,7 @@ $layout-header-link-height: 32px;
       line-height: $layout-header-link-height;
       text-decoration: none;
       color: inherit;
+      border-bottom: none;
     }
 
     a:hover,
@@ -97,7 +98,7 @@ $layout-header-link-height: 32px;
   }
 
   .meta-field + .meta-field {
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
   }
 }
 

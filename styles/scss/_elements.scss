@@ -23,15 +23,21 @@ a:link {
   color: #2980b9;
   text-decoration: none;
   font-weight: bold;
+  border-bottom: 2px solid lighten(#2980b9, 30%);
+}
+
+a:link.no-line {
+  border-bottom: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:visited {
   color: #8e44ad;
   text-decoration: none;
+  border-bottom: 2px solid lighten(#8e44ad, 30%);
 }

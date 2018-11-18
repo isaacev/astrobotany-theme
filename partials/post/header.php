@@ -42,14 +42,43 @@ if (has_post_thumbnail()) {
   <div id="meta" class="row">
     <div class="narrow">
       <p class="meta-field">
-        <span>By:</span>
+        <span>Author</span>
         <?php the_author_posts_link(); ?>
       </p>
-      <?php if (has_tag()): ?>
+
+      <?php
+        $categories = get_the_terms($post->ID, 'category');
+        $tags = get_the_terms($post->ID, 'post_tag');
+      ?>
+      <?php if (count($categories) > 0): ?>
         <p class="meta-field">
-          <span>Category:</span>
-          <?php foreach (get_the_tags() as $tag): ?>
-            <a href="<?= get_tag_link($tag->term_id); ?>" class="tag"><?= $tag->name; ?></a>
+          <?php if (count($categories) == 1): ?>
+            <span>Category</span>
+          <?php else: ?>
+            <span>Categories</span>
+          <?php endif; ?>
+          <?php foreach ($categories as $cat): ?>
+            <?php
+              $url = get_term_link($cat->term_id);
+              $name = $cat->name;
+            ?>
+            <a href="<?= $url; ?>" class="category"><?= $name; ?></a>
+          <?php endforeach; ?>
+        </p>
+      <?php endif; ?>
+      <?php if (count($tags) > 0): ?>
+        <p class="meta-field">
+          <?php if (count($tags) == 1): ?>
+            <span>Tag</span>
+          <?php else: ?>
+            <span>Tags</span>
+          <?php endif; ?>
+          <?php foreach ($tags as $tag): ?>
+            <?php
+              $url = get_tag_link($tag->term_id);
+              $name = $tag->name;
+            ?>
+            <a href="<?= $url; ?>" class="tag"><?= $name; ?></a>
           <?php endforeach; ?>
         </p>
       <?php endif; ?>

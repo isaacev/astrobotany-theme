@@ -50,7 +50,7 @@ if (has_post_thumbnail()) {
         $categories = get_the_terms($post->ID, 'category');
         $tags = get_the_terms($post->ID, 'post_tag');
       ?>
-      <?php if (count($categories) > 0): ?>
+      <?php if ($categories !== false && count($categories) > 0): ?>
         <p class="meta-field">
           <?php if (count($categories) == 1): ?>
             <span>Category</span>
@@ -66,7 +66,7 @@ if (has_post_thumbnail()) {
           <?php endforeach; ?>
         </p>
       <?php endif; ?>
-      <?php if (count($tags) > 0): ?>
+      <?php if ($tags !== false && count($tags) > 0): ?>
         <p class="meta-field">
           <?php if (count($tags) == 1): ?>
             <span>Tag</span>

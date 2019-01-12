@@ -263,4 +263,35 @@ main #latest ol {
   padding: 0;
 }
 
+.excerpt.listed {
+  list-style: none;
+}
+.excerpt.listed + .excerpt.listed {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #b8bfcc;
+}
+.excerpt.listed .timestamp {
+  margin: 0 0 0.5rem 0;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: gray;
+}
+.excerpt.listed .headline {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: "Merriweather", serif;
+}
+
+.excerpt.featured figure {
+  margin: 0;
+}
+.excerpt.featured .overlay {
+  margin: 0;
+}
+.excerpt.featured .overlay img {
+  width: 100%;
+  display: block;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -5,8 +5,8 @@
         <img src="<?= get_the_post_thumbnail_url(); ?>" />
       <?php endif; ?>
       <div class="header">
-        <p class="timestamp">3 days ago</p>
-        <h2 class="headline">Libero exercit fugiat</h2>
+        <p class="timestamp"><?php the_date(); ?></p>
+        <h2 class="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
       </div>
     </div>
   </figure>
